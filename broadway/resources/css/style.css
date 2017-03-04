@@ -1,0 +1,58 @@
+body {
+  text-align: center;
+  font-family: Helvetica;
+}
+
+header {
+  background-image: url('file:///C:/Users/jelli/Documents/projects/website/broadway/resources/images/the-flatiron-building.jpg');
+  background-size: cover;
+}
+
+header h1 {
+  font-size: 70px;
+  font-weight: bold;
+  color: white;
+}
+
+header nav a {
+  margin: 16px auto;
+  display: block;
+  font-size: 18px;
+  color: white;
+}
+
+main h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+main h3 {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+main p {
+  font-size: 14px;
+}
+
+#designed {
+  background-image: url('file:///C:/Users/jelli/Documents/projects/website/broadway/resources/images/the-flatiron-building.jpg');
+  background-size: cover;
+  font-size: 23px;
+  font-weight: bold;
+  color: white;
+}
+
+footer {
+  font-size: 11px;
+  color: white;
+  background-color: dimgray;
+}
+
+footer nav {
+  display: inline-block;
+}
+
+footer nav a {
+  color: white;
+}
