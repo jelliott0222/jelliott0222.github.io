@@ -55,7 +55,7 @@ main {
 .mission {
   width: 1200px;
   height: 700px;
-  background-image: url(file:///C:/Users/jelli/Documents/projects/TeaCozy/resources/images/img-mission-background.jpg);
+  background-image: url(https://jelliott0222.github.io/TeaCozy/resources/images/img-mission-background.jpg);
 }
 
 .mission-heading {
@@ -89,7 +89,7 @@ main {
 .locations-img-container {
   height: 500px;
   width: 1200px;
-  background-image: url(file:///C:/Users/jelli/Documents/projects/TeaCozy/resources/images/img-locations-background.jpg);
+  background-image: url(https://jelliott0222.github.io/TeaCozy/resources/images/img-locations-background.jpg);
   background-position: center;
   flex-wrap: wrap;
 }
