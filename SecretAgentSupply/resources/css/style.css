@@ -1,0 +1,170 @@
+html, body {
+  font-size: 18px;
+  font-family: Helvetica;
+}
+
+.container {
+  margin: 0px auto;
+  max-width: 960px;
+  width: 100%;
+  display: flex;
+}
+
+header .logo {
+  background-color: black;
+  padding: 0.66rem 0rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+header .logo .container {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header .logo img {
+  height: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+}
+
+header .main-image {
+  background-image: url(file:///C:/Users/jelli/Documents/projects/SecretAgentSupply/resources/images/moto.jpeg);
+  background-size: cover;
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header .main-image .container {
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 9rem;
+}
+
+header .main-image .new-arrival {
+  background-color: black;
+  padding: 2rem 3rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  flex-wrap: wrap;
+  max-width: 20rem;
+}
+
+.main-image h1, .main-image h2 {
+  display: block;
+  width: 100%;
+}
+
+.main-image h1 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.main-image h2 {
+  font-size: 2rem;
+}
+
+header nav {
+  background-color: firebrick;
+}
+
+header nav .container {
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header nav ul li, header nav ul li a {
+  padding: 0.75rem 0rem;
+}
+
+main {
+  padding: 3rem 0rem 4rem;
+}
+
+main .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .img-container {
+  border: 4px solid black;
+  width: 30%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+main .img-container .product-image {
+  padding: 2rem 0rem;
+  height: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+main .img-container .product-image img {
+  max-width: 8em;
+}
+
+main .img-container span {
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 0.5rem 0rem;
+}
+
+main .info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+main .info-row .info {
+  width: 35%;
+}
+
+main .info-row .info h3 {
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+main .info-row .info span {
+  padding: 5px 0px;
+  display: block;
+}
+
+footer {
+  height: 5rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
