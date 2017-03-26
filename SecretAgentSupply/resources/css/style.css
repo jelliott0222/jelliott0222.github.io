@@ -10,6 +10,10 @@ html, body {
   display: flex;
 }
 
+.mobile-only {
+  display: none;
+}
+
 header .logo {
   background-color: black;
   padding: 0.66rem 0rem;
@@ -82,6 +86,22 @@ header nav ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+header nav span {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+header nav span a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.75rem 0rem;
+  display: block;
 }
 
 header nav ul li {
@@ -167,4 +187,72 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  main .img-container {
+    width: 47%;
+  }
+
+  main .img-container:last-child {
+    display: none;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  header .main-image {
+    height: 15rem;
+  }
+
+  header .main-image .container {
+    margin-top: 10rem;
+    width: 100%;
+  }
+
+  header .main-image .new-arrival {
+    padding: 1rem 2rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .main-image h1 {
+    font-size: 0.77rem;
+  }
+
+  .main-image h2 {
+    font-size: 1rem;
+  }
+
+  main .container {
+    justify-content: center;
+  }
+
+  main .img-container {
+    width: 90%;
+  }
+
+  main .img-container:nth-child(2) {
+    display: none;
+  }
+
+  main .info-row {
+    flex-wrap: wrap;
+  }
+
+  main .info-row .info {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+
+  .copyright {
+    margin: 0px auto;
+  }
 }
