@@ -1,0 +1,9 @@
+.container {
+  width: 960px;
+}
+
+header {
+  background-image: url(https://jelliott0222.github.io/TortoiseshellOptics/resources/images/glasses-bg.png);
+  background-size: cover;
+  height: 100px;
+}
