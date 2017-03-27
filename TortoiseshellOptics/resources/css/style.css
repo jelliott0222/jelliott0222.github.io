@@ -1,9 +1,149 @@
+html, body {
+  font-size: 18px;
+  font-family: Helvetica;
+}
+
 .container {
   width: 960px;
+  margin: 0px auto;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+.abs-ctr {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 header {
   background-image: url(https://jelliott0222.github.io/TortoiseshellOptics/resources/images/glasses-bg.png);
   background-size: cover;
-  height: 100px;
+  height: 30rem;
+  padding-top: 1rem;
+}
+
+.logo-nav-bar {
+  background-color: cadetblue;
+  color: white;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  margin-right: 1rem;
+}
+
+.logo-nav-bar ul {
+  list-style: none;
+}
+
+.logo-nav-bar li {
+  display: inline-block;
+  padding: 0rem 1rem;
+}
+
+.logo-nav-bar li:last-child {
+  padding-right: 0;
+}
+
+.headline {
+  margin-top: 10rem;
+  background-color: white;
+  color: black;
+  padding: 1.5rem 5rem;
+  font-weight: bold;
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: -2rem;
+}
+
+.icon-row {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-container {
+  height: 8rem;
+  margin: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 5rem;
+  text-align: center;
+}
+
+.icon-container img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.icon-container:first-child img {
+  width: 70%;
+}
+
+.info-row {
+  padding-bottom: 4rem;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.info-container {
+  width: 35%;
+  margin-right: 5%;
+}
+
+.info-container h3 {
+  background-color: cadetblue;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 10rem;
+  color: white;
+  padding: 0.5rem 1.25rem;
+}
+
+.info-container p {
+  padding: 1rem 0;
+  margin: 1rem 0;
+  line-height: 1.5rem;
+}
+
+footer {
+  background-color: azure;
+  padding: 4rem 3rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+footer img {
+  margin-right: 1rem;
+}
+
+@@media only screen and (max-width: 1024px) {
+  .container {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .logo-nav-bar {
+    width: 100%;
+  }
+
+  .headline {
+    padding: 0.75rem 4rem;
+    font-size: 1.33rem;
+    margin-right: 2rem;
+    margin-top: 5rem;
+  }
 }
