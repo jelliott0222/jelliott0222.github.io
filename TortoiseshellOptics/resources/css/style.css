@@ -9,6 +9,10 @@ html, body {
   box-sizing: border-box;
 }
 
+.mobile-only {
+  display: none;
+}
+
 .flex {
   display: flex;
 }
@@ -39,6 +43,7 @@ header {
 
 .logo img {
   margin-right: 1rem;
+  height: 1.5rem;
 }
 
 .logo-nav-bar ul {
@@ -52,6 +57,22 @@ header {
 
 .logo-nav-bar li:last-child {
   padding-right: 0;
+}
+
+header nav span {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+header nav span a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.75rem 0rem;
+  display: block;
 }
 
 .headline {
@@ -128,16 +149,17 @@ footer {
 
 footer img {
   margin-right: 1rem;
+  height: 1.5rem;
 }
 
-@@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .container {
-    max-width: 100%;
-    margin: auto;
+    width: 100%;
   }
 
-  .logo-nav-bar {
-    width: 100%;
+  header {
+    padding-top: 0;
+    height: 25rem;
   }
 
   .headline {
@@ -145,5 +167,71 @@ footer img {
     font-size: 1.33rem;
     margin-right: 2rem;
     margin-top: 5rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .non-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 471px) {
+  header {
+    background-position: 20%;
+    height: 20rem;
+  }
+
+  .headline {
+    padding: 1rem 0rem;
+    font-size: 1rem;
+    margin-top: 9rem;
+    width: 100%;
+    margin-right: 0rem;
+    text-align: center;
+  }
+
+  .icon-row {
+    flex-direction: column;
+    padding: 3rem 0rem;
+  }
+
+  .icon-container {
+    margin: 0.77rem 0rem;
+    height: auto;
+    font-size: 0.77rem;
+    line-height: 1rem;
+  }
+
+  .info-row {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+
+  .info-container {
+    width: 100%;
+  }
+
+  .info-container h3 {
+    width: 100%;
+  }
+
+  .info-container p {
+    font-size: 0.77rem;
+    padding: 1rem 0.25rem 4rem;
+    margin: 0;
+  }
+
+  footer {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .copyright {
+    display: none;
   }
 }
