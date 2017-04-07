@@ -1,0 +1,277 @@
+/*https://jelliott0222.github.io/fotomatic/resources/images/banner-landingpage.jpg*/
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|NTR|Muli:700|Nunito+Sans:700');
+
+html, body {
+  font-size: 16px;
+  font-family: NTR;
+}
+
+.col-left {
+  width: 60%;
+  padding: 2rem 1.5rem;
+}
+
+.col-right {
+  width: 26.4375rem;
+  padding: 2rem 1rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Nunito Sans';
+  color: #4a4a4a;
+  padding-top: 2rem;
+}
+
+h4 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+
+
+/* Header Styles */
+
+header {
+  padding: 0 1.5rem;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Lato;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #9b9b9b;
+}
+
+.logo span {
+  font-weight: bold;
+  color: #4e4e4e;
+}
+
+header nav a {
+  margin: 0 1rem;
+  color: #4e4e4e;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+header nav a:last-child {
+  margin-right: 0;
+}
+
+
+
+/* Start Here Section Styles */
+
+.start-here {
+  background-color: #d8d8d8;
+  color: #9b9b9b;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.start-here img {
+  width: 100%;
+  height: auto;
+}
+
+.sh-info {
+  color: #4e4e4e;
+  font-family: Muli;
+  font-weight: 700;
+}
+
+.sh-info h1, .sh-info h3, .sh-info .button {
+  margin: 1.5rem 0;
+}
+
+.sh-info h1 {
+  font-size: 4rem;
+}
+
+.sh-info h3 {
+  font-size: 2rem;
+}
+
+.sh-info .button {
+  padding: 0.5em 0;
+  display: block;
+  background-color: #4e4e4e;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: Muli;
+}
+
+
+
+/* Featured Section Styles */
+
+.featured {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.top-featured img, .thesis img {
+  width: 100%;
+  height: auto;
+}
+
+.top-featured p, .thesis p {
+  font-size: 1.2rem;
+  padding: 1.5rem 0;
+}
+
+.top-featured span, .thesis span {
+  font-size: 1.2rem;
+}
+
+.side-featured {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-left: 1px solid #d8d8d8;
+  padding: 2rem 0;
+}
+
+.event {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  height: 10.5rem;
+  border-bottom: 1px solid #d8d8d8;
+  box-sizing: border-box;
+}
+
+.event:first-child {
+  padding-top: 0;
+}
+
+.event img {
+  width: 35%;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.event span {
+  font-size: 1rem;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.event a {
+  text-decoration: none;
+}
+
+.gray {
+  background-color: #d8d8d8;
+}
+
+
+
+/* Learning Section Styles */
+
+.learning {
+  background-color: #eaebec;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.learning-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem 0rem;
+}
+
+.learning-tile {
+  margin: 1rem;
+  width: 25%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: white;
+}
+
+.learning-tile img {
+  height: 13.75rem;
+  width: 100%;
+}
+
+.tile-info {
+  padding: 1rem 1rem 1.5rem;
+  background-color: white;
+}
+
+.tile-info h5 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+.tile-info span {
+  font-size: 1.2rem;
+}
+
+
+
+/* Thesis Sections Styles */
+
+.thesis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.thesis .col-left video {
+  width: 100%;
+}
+
+.thesis-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.thesis-container .col-left {
+  padding-right: 1rem;
+}
+
+
+
+
+/* Footer Styles */
+
+footer {
+  padding: 1.5rem 1.5rem 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  border-top: 1px solid #e7e9e9;
+}
+
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
