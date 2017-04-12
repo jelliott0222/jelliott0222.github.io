@@ -7,13 +7,17 @@ html, body {
   font-family: NTR;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .col-left {
   width: 60%;
   padding: 2rem 1.5rem;
 }
 
 .col-right {
-  width: 26.4375rem;
+  width: 40%;
   padding: 2rem 1rem;
 }
 
@@ -21,7 +25,7 @@ h2 {
   font-size: 3rem;
   font-weight: bold;
   font-family: 'Nunito Sans';
-  color: #4a4a4a;
+  color: #2C4870;
   padding-top: 2rem;
 }
 
@@ -52,20 +56,41 @@ header {
   color: #9b9b9b;
 }
 
-.logo span {
+.logo b {
   font-weight: bold;
-  color: #4e4e4e;
+  color: #2C4870;
 }
 
 header nav a {
   margin: 0 1rem;
-  color: #4e4e4e;
+  color: #2C4870;
   text-decoration: none;
   font-size: 1.2rem;
+  padding: 10px 0;
 }
 
 header nav a:last-child {
   margin-right: 0;
+}
+
+nav a:hover {
+  color: #000;
+  border-bottom: 2px solid #2C4870;
+}
+
+.mobile-nav {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+a {
+  transition: all 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  transform: scale(1.2);
 }
 
 
@@ -78,6 +103,7 @@ header nav a:last-child {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .start-here img {
@@ -86,7 +112,7 @@ header nav a:last-child {
 }
 
 .sh-info {
-  color: #4e4e4e;
+  color: #2C4870;
   font-family: Muli;
   font-weight: 700;
 }
@@ -106,12 +132,17 @@ header nav a:last-child {
 .sh-info .button {
   padding: 0.5em 0;
   display: block;
-  background-color: #4e4e4e;
+  background-color: #2C4870;
   color: white;
   text-align: center;
   text-decoration: none;
   font-size: 1.5rem;
   font-family: Muli;
+  transition: all 0.3s ease;
+}
+
+.sh-info .button:hover {
+  background-color: #142E54
 }
 
 
@@ -154,10 +185,14 @@ header nav a:last-child {
   height: 10.5rem;
   border-bottom: 1px solid #d8d8d8;
   box-sizing: border-box;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
 }
 
-.event:first-child {
-  padding-top: 0;
+.event:hover {
+  background-color: #2C4870;
+  color: #fff;
 }
 
 .event img {
@@ -174,6 +209,7 @@ header nav a:last-child {
 
 .event a {
   text-decoration: none;
+  color: #2C4870;
 }
 
 .gray {
@@ -204,11 +240,18 @@ header nav a:last-child {
 .learning-tile {
   margin: 1rem;
   width: 25%;
+  min-width: 300px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   background-color: white;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.learning-tile:hover {
+  transform: scale(1.1);
 }
 
 .learning-tile img {
@@ -229,6 +272,27 @@ header nav a:last-child {
 
 .tile-info span {
   font-size: 1.2rem;
+}
+
+.mobile-learning-container {
+  display: none;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+.mobile-learning-container h4 {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #d8d8d8;
+  font-size: 1.5rem;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.mobile-learning-container h4:hover {
+  transform: scale(1.2);
+  background-color: #333;
+  color: #d8d8d8;
 }
 
 
@@ -274,4 +338,113 @@ footer {
   color: inherit;
   text-decoration: none;
   margin-right: 0.5rem;
+}
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 900px) {
+  .col-left, .col-right {
+    width: 100%;
+  }
+
+  .top-featured {
+    display: none;
+  }
+
+  .event img {
+    width: auto;
+    height: 100%;
+  }
+
+  .thesis-container {
+    margin: 32px 0px 24px;
+  }
+
+  .thesis-container .col-right, .thesis-container .col-left h2, .thesis-container .col-left p {
+    display: none;
+  }
+
+  .thesis-container .col-left {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .mobile-nav {
+    display: flex;
+  }
+
+  header .logo, header nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .learning-tile {
+    width: 100%;
+  }
+
+  .footer-links {
+    display: none;
+  }
+
+  .sh-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .sh-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .side-featured {
+    padding: 1rem 0;
+  }
+
+  .event {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 0 1rem;
+  }
+
+  .event img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .event-details {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  .sh-info .button {
+    font-size: 1rem;
+  }
+
+  .learning {
+    padding: 1rem;
+  }
+
+  .learning h2 {
+    padding-bottom: 1rem;
+  }
+
+  .learning-container {
+    display: none;
+  }
+
+  .mobile-learning-container {
+    display: block;
+  }
 }
