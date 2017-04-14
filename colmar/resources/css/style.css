@@ -196,8 +196,8 @@ a {
 }
 
 .event img {
-  width: 35%;
-  height: auto;
+  width: auto;
+  height: 100%;
   margin-right: 1rem;
 }
 
@@ -409,8 +409,6 @@ footer {
   }
 
   .event img {
-    width: 100%;
-    height: auto;
     margin: 0;
   }
 
