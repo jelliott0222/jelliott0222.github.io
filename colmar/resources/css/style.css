@@ -353,11 +353,6 @@ footer {
     display: none;
   }
 
-  .event img {
-    width: auto;
-    height: 100%;
-  }
-
   .thesis-container {
     margin: 32px 0px 24px;
   }
@@ -410,6 +405,8 @@ footer {
 
   .event img {
     margin: 0;
+    width: 100%;
+    height: auto;
   }
 
   .event-details {
