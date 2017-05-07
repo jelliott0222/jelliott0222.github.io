@@ -1,29 +1,72 @@
+/* General Styles */
+
+* {
+  transition: all 0.4s ease;
+}
+
 body {
   text-align: center;
   font-family: Helvetica;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+header,
+footer {
+  flex: none;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+
+
+/* Header Styles */
 
 header {
   background-image: url('https://jelliott0222.github.io/broadway/resources/images/the-flatiron-building.jpg');
   background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 10px;
 }
 
 header h1 {
-  font-size: 70px;
+  font-size: 48px;
   font-weight: bold;
   color: white;
 }
 
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 header nav a {
-  margin: 16px auto;
-  display: block;
+  padding: 10px 20px;
   font-size: 18px;
   color: white;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
 }
+
+header nav a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+
+
+/* Main Section Styles */
 
 main h2 {
   font-size: 32px;
   font-weight: bold;
+  padding: 20px;
 }
 
 main h3 {
@@ -35,24 +78,120 @@ main p {
   font-size: 14px;
 }
 
+
+
+/* Our Process */
+
+#ourProcess {
+  color: #5B565D;
+}
+
+.process-row {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.process-item {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.process-item:hover {
+  background-color: #ccc;
+}
+
+
+
+/* Designed Border */
+
 #designed {
-  background-image: url('https://jelliott0222.github.io/broadway/resources/images/the-flatiron-building.jpg');
+  background-image: url('https://jelliott0222.github.io/broadway/resources/images/nyc.jpeg');
   background-position: center;
   font-size: 23px;
   font-weight: bold;
-  color: white;
+  color: #fff;
+  text-shadow: 0px 0px 8px #333;
+  padding: 40px 0;
 }
+
+
+
+/* Info Sections */
+
+#info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-section {
+  padding: 30px 0;
+  color: #5B565D;
+}
+
+.info-section p {
+  padding: 10px 0;
+}
+
+.info-section:nth-child(2) {
+  background-color: #5B565D;
+  color: #fff;
+}
+
+
+
+/* Footer Styles */
 
 footer {
   font-size: 11px;
-  color: white;
-  background-color: dimgray;
+  background-color: #5B565D;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span {
+  color: rgba(255,255,255,0.6);
 }
 
 footer nav {
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 footer nav a {
-  color: white;
+  color: rgba(255,255,255,0.6);
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+footer nav a:hover {
+  color: rgba(255,255,255,1);
+  text-decoration: underline;
+}
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+  .process-row {
+    flex-wrap: wrap;
+  }
+
+  .process-item {
+    flex-basis: 100%;
+    margin: 0;
+    padding: 20px 0;
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+
+  .process-item:last-of-type {
+    border-bottom: 1px solid #ccc;
+  }
 }
