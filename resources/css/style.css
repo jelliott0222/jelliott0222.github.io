@@ -1,7 +1,7 @@
 body {
   background-color: #111;
   color: #008CA8;
-  font-family: Garamond;
+  font-family: Candara;
 }
 
 a {
@@ -21,12 +21,24 @@ h1 {
 }
 
 section {
-  padding: 100px;
+  padding: 100px 10px;
   text-align: center;
 }
 
 h2 {
   color: #1D1160;
+}
+
+section a {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-decoration: none;
+}
+
+section a:hover {
+  background-color: #1d1160;
+  color: #fff;
 }
 
 section:nth-child(odd) {
