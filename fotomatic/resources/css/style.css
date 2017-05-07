@@ -132,7 +132,8 @@ header .mobile {
 }
 
 #sign-up-cta .content {
-  width: 25.625rem;
+  max-width: 25.625rem;
+  width: 100%;
   margin-top: 2rem;
   font-family: "Roboto", sans-serif;
   font-size: 1.25rem;
@@ -166,7 +167,7 @@ header .mobile {
   padding: 1.25rem 7.25rem;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 790px) {
   #sign-up-section {
     align-items: center;
     justify-content: center;
@@ -177,6 +178,7 @@ header .mobile {
     position: static;
     width: auto;
     height: auto;
+    padding: 0;
     background-color: transparent;
     border: none;
   }
