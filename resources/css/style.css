@@ -1,0 +1,38 @@
+body {
+  background-color: #111;
+  color: #008CA8;
+  font-family: Garamond;
+}
+
+a {
+  color: #008CA8;
+  font-family: 'Segoe UI';
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+section {
+  padding: 100px;
+  text-align: center;
+}
+
+h2 {
+  color: #1D1160;
+}
+
+section:nth-child(odd) {
+  background-color: #A1A1A4;
+}
+
+section:nth-child(even) {
+  background-color: #fff;
+}
