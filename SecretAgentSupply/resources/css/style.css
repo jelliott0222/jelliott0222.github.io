@@ -14,6 +14,10 @@ html, body {
   display: none;
 }
 
+
+
+/*Header Styles*/
+
 header .logo {
   background-color: black;
   padding: 0.66rem 0rem;
@@ -33,6 +37,11 @@ header .logo img {
   margin-right: 1rem;
 }
 
+header .logo a {
+  text-decoration: none;
+  color: #fff;
+}
+
 header .main-image {
   background-image: url(https://jelliott0222.github.io/SecretAgentSupply/resources/images/moto.jpeg);
   background-size: cover;
@@ -49,7 +58,7 @@ header .main-image .container {
 }
 
 header .main-image .new-arrival {
-  background-color: black;
+  background-color: rgba(0,0,0,0.8);
   padding: 2rem 3rem;
   color: white;
   text-transform: uppercase;
@@ -71,6 +80,10 @@ header .main-image .new-arrival {
 .main-image h2 {
   font-size: 2rem;
 }
+
+
+
+/*Navigation*/
 
 header nav {
   background-color: firebrick;
@@ -105,35 +118,65 @@ header nav span a {
 }
 
 header nav ul li {
-  display: inline-block;
+  flex-grow: 1;
+  text-align: center;
 }
 
 header nav ul li a {
   color: white;
   font-weight: bold;
   text-decoration: none;
+  padding: 0.75rem 0rem;
+  display: block;
 }
 
-header nav ul li, header nav ul li a {
-  padding: 0.75rem 0rem;
+header nav a:hover {
+  background-color: #fff;
+  color: firebrick;
 }
+
+
+
+/*Mobile Menu*/
+
+.toggle-menu {
+  display: none;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem;
+  color: #fff;
+}
+
+
+
+/*Main Styles*/
 
 main {
   padding: 3rem 0rem 4rem;
+  background-color: #eee;
 }
 
 main .container {
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 main .img-container {
-  border: 4px solid black;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
   width: 30%;
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+main .img-container:hover {
+  border-color: #555;
 }
 
 main .img-container .product-image {
@@ -151,8 +194,17 @@ main .img-container .product-image img {
 
 main .img-container span {
   width: 100%;
-  background-color: black;
-  color: white;
+  background-color: #fff;
+  color: firebrick;
+  display: block;
+  text-align: center;
+  padding: 0.5rem 0rem;
+}
+
+main .img-container:hover span {
+  width: 100%;
+  background-color: firebrick;
+  color: #fff;
   display: block;
   text-align: center;
   padding: 0.5rem 0rem;
@@ -160,50 +212,86 @@ main .img-container span {
 
 main .info-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin-top: 3rem;
 }
 
 main .info-row .info {
-  width: 35%;
+  margin: 0 10px;
 }
 
 main .info-row .info h3 {
-  background-color: black;
-  color: white;
+  color: #333;
+  border-bottom: 2px solid #333;
   padding: 1rem 2rem;
 }
 
-main .info-row .info span {
+main .info-row .info > span {
   padding: 5px 0px;
   display: block;
+  text-align: center;
 }
+
+
+
+/*Footer Styles*/
 
 footer {
   height: 5rem;
   background-color: black;
   color: white;
+  font-size: 0.75em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+
+
+/*Media Queries*/
+
 @media only screen and (max-width: 1024px) {
   main .img-container {
     width: 47%;
+    margin: 0.5rem;
+    flex: 1 0 auto;
   }
 
-  main .img-container:last-child {
-    display: none;
+  header nav .container {
+    flex-wrap: wrap;
+    position: relative;
   }
 
   header nav ul {
-    display: none;
+    display: block;
+    overflow: hidden;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    transition: all 0.3s ease;
   }
 
-  .mobile-only {
+  header nav ul li {
     display: block;
+    background-color: #333;
+  }
+
+  .toggle-menu {
+    display: block;
+  }
+
+  nav ul a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-family: Calibri;
+    padding: 5px;
+  }
+
+  nav ul.active {
+    height: 100%;
+    overflow: visible;
   }
 }
 
@@ -239,10 +327,6 @@ footer {
     width: 90%;
   }
 
-  main .img-container:nth-child(2) {
-    display: none;
-  }
-
   main .info-row {
     flex-wrap: wrap;
   }
@@ -250,6 +334,16 @@ footer {
   main .info-row .info {
     width: 90%;
     margin-bottom: 0.5rem;
+  }
+
+  main .info-row .info h3 {
+    display: inline;
+    border-bottom: 0;
+    padding: 1rem 0;
+  }
+
+  main .info-row .info span {
+    display: inline;
   }
 
   .copyright {

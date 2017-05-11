@@ -4,15 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Secret Agent Supply Inc.</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="resources/css/reset.css">
     <link rel="stylesheet" href="resources/css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src='resources/js/mobilemenu.js'></script>
+
   </head>
   <body>
     <header>
       <div class="logo">
         <div class="container">
           <img src="resources/images/logo.png" alt="logo">
-          <span>Secret Agent Supply Inc.</span>
+          <a href="index.html"><span>Secret Agent Supply Inc.</span></a>
         </div>
       </div>
       <div class="main-image">
@@ -25,6 +30,7 @@
       </div>
       <nav>
         <div class="container">
+          <a href="#" class="toggle-menu hidden-lg">Menu</a>
           <ul>
             <li><a href="#">Eyewear</a></li>
             <li><a href="#">Apparel</a></li>
@@ -33,7 +39,6 @@
             <li><a href="#">Classes</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
-          <span class='mobile-only'><a href="#">Menu</a></span>
         </div>
       </nav>
     </header>
@@ -60,18 +65,18 @@
       </div>
       <div class="info-row container">
         <div class="location info">
-          <h3>Location</h3>
+          <h3><i class='fa fa-map-marker'></i> <span>Location</span></h3>
           <span>-47.346436, 84.32354</span>
         </div>
         <div class="hours info">
-          <h3>Hours</h3>
+          <h3><i class='fa fa-clock-o'></i> <span>Hours</span></h3>
           <span>0800-1800</span>
         </div>
       </div>
     </main>
     <footer>
       <div class="container">
-        <span class="copyright">Copyright Secret Agent Supply Inc.</span>
+        <span class="copyright">&copy; Copyright Secret Agent Supply Inc.</span>
       </div>
     </footer>
   </body>
