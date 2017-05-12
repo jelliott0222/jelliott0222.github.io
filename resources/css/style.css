@@ -1,3 +1,18 @@
+/* Color Codes
+
+Purple #1d1160, rgb(29,17,96)
+Teal #008ca8, rgb(0,140,168)
+White #fff, rgb(255,255,255)
+Gray #a1a1a4, rgb(161,161,164)
+
+*/
+
+
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #111;
   color: #008CA8;
@@ -14,10 +29,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url('C:/Users/jelli/Documents/projects/website/resources/images/side_computer.png');
+  background-size: cover;
+  background-position: center;
 }
 
 h1 {
   font-size: 72px;
+  color: #fff;
 }
 
 section {
