@@ -7,22 +7,34 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' href='resources/css/reset.css'>
     <link rel='stylesheet' type='text/css' href='resources/css/style.css'>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src='resources/js/mobilemenu.js'></script>
   </head>
   <body>
     <header>
-      <h1>Broadway Design</h1>
-      <nav>
-        <a href='index.html'>Home</a>
-        <a href='process.html'>Process</a>
-        <a href='work.html'>Work</a>
-        <a href='team.html'>Team</a>
-        <a href='contact.html'>Contact</a>
-      </nav>
+      <div class="logo-nav-bar">
+        <h1>Broadway Design</h1>
+        <nav>
+          <span class='mobile-only toggle-menu'><a href="#">Menu</a></span>
+          <ul>
+            <li><a href='index.html'>Home</a></li>
+            <li><a href='#ourProcess'>Process</a></li>
+            <li><a href='#work'>Work</a></li>
+            <li><a href='#team'>Team</a></li>
+            <li><a href='#contact'>Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="motto">
+        <h2>The future of design</h2>
+        <h3>Right at your fingertips</h3>
+      </div>
     </header>
     <main>
       <div id='ourProcess'>
         <h2>Our Process</h2>
-        <div class="process-row">
+        <div class="row">
           <div class='process-item'>
             <img src='resources/images/identify.svg' />
             <h3>Identify</h3>
@@ -44,15 +56,48 @@
         Designed in New York
       </div>
       <div id='info'>
-        <div class='info-section'>
+        <div class='info-section' id='work'>
           <h3>Portfolio</h3>
-          <p>Coming Soon</p>
+          <div class="folio row">
+            <div class="folio-img">
+              <img src="resources/images/photo1.jpeg" alt="Image 1">
+              <h3>Company Name</h3>
+            </div>
+            <div class="folio-img">
+              <img src="resources/images/photo2.png" alt="Image 2">
+              <h3>Company Name</h3>
+            </div>
+            <div class="folio-img">
+              <img src="resources/images/photo3.jpeg" alt="Image 3">
+              <h3>Company Name</h3>
+            </div>
+            <div class="folio-img">
+              <img src="resources/images/photo4.jpeg" alt="Image 4">
+              <h3>Company Name</h3>
+            </div>
+            <div class="folio-img">
+              <img src="resources/images/photo5.jpeg" alt="Image 5">
+              <h3>Company Name</h3>
+            </div>
+            <div class="folio-img">
+              <img src="resources/images/photo6.jpeg" alt="Image 6">
+              <h3>Company Name</h3>
+            </div>
+            <div class="folio-img">
+              <img src="resources/images/photo7.jpeg" alt="Image 7">
+              <h3>Company Name</h3>
+            </div>
+            <div class="folio-img">
+              <img src="resources/images/photo8.jpg" alt="Image 8">
+              <h3>Company Name</h3>
+            </div>
+          </div>
         </div>
-        <div class='info-section'>
+        <div class='info-section' id='team'>
           <h3>Team</h3>
           <p>We're Hiring!</p>
         </div>
-        <div class='info-section'>
+        <div class='info-section' id='contact'>
           <h3>Contact</h3>
           <p><i class='fa fa-phone'></i> (555) 555-5555</p>
           <p><i class='fa fa-envelope-o'></i> test@example.com</p>
