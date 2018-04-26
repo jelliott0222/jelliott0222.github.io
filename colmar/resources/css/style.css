@@ -45,6 +45,11 @@ header {
   justify-content: space-between;
   align-items: center;
   font-family: Lato;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
 }
 
 .logo {
@@ -67,6 +72,7 @@ header nav a {
   text-decoration: none;
   font-size: 1.2rem;
   padding: 10px 0;
+  border-bottom: 2px solid transparent;
 }
 
 header nav a:last-child {
@@ -104,6 +110,7 @@ a {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 4rem;
 }
 
 .start-here img {
@@ -227,6 +234,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .learning-container {
@@ -326,12 +334,14 @@ a {
 /* Footer Styles */
 
 footer {
-  padding: 1.5rem 1.5rem 3.5rem;
+  padding: 3.5rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.2rem;
   border-top: 1px solid #e7e9e9;
+  background-color: #2C4870;
+  color: #fff;
 }
 
 .footer-links a {
@@ -381,8 +391,23 @@ footer {
     width: 100%;
   }
 
+  footer {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  .copyright {
+    padding: 10px;
+  }
+
   .footer-links {
-    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-links a {
+    display: inline-block;
+    padding: 10px;
   }
 
   .sh-info h1 {
