@@ -7,25 +7,20 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' href='resources/css/reset.css'>
     <link rel='stylesheet' type='text/css' href='resources/css/style.css'>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src='resources/js/mobilemenu.js'></script>
   </head>
   <body>
     <header>
-      <div class="logo-nav-bar">
-        <h1>Broadway Design</h1>
-        <nav>
-          <span class='mobile-only toggle-menu'><a href="#">Menu</a></span>
-          <ul>
-            <li><a href='index.html'>Home</a></li>
-            <li><a href='#ourProcess'>Process</a></li>
-            <li><a href='#work'>Work</a></li>
-            <li><a href='#team'>Team</a></li>
-            <li><a href='#contact'>Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="logo-nav-bar">
+        <h1><a href='index.html'>Broadway Design</a></h1>
+        <span class='mobile-only toggle-menu'><a href="#">Menu</a></span>
+        <ul>
+          <li><a href='index.html'>Home</a></li>
+          <li><a href='#ourProcess'>Process</a></li>
+          <li><a href='#work'>Work</a></li>
+          <li><a href='#team'>Team</a></li>
+          <li><a href='#contact'>Contact</a></li>
+        </ul>
+      </nav>
       <div class="motto">
         <h2>The future of design</h2>
         <h3>Right at your fingertips</h3>
@@ -37,18 +32,24 @@
         <div class="row">
           <div class='process-item'>
             <img src='resources/images/identify.svg' />
-            <h3>Identify</h3>
-            <p>We focus on the most important details.</p>
+            <div class="process-item-description">
+              <h3>Identify</h3>
+              <p>We focus on the most important details.</p>
+            </div>
           </div>
           <div class='process-item'>
             <img src='resources/images/understand.svg' />
-            <h3>Understand</h3>
-            <p>We study our projects inside and out.</p>
+            <div class="process-item-description">
+              <h3>Understand</h3>
+              <p>We study our projects inside and out.</p>
+            </div>
           </div>
           <div class='process-item'>
             <img src='resources/images/execute.svg' />
-            <h3>Execute</h3>
-            <p>We put everything we have into our work.</p>
+            <div class="process-item-description">
+              <h3>Execute</h3>
+              <p>We put everything we have into our work.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -57,63 +58,135 @@
       </div>
       <div id='info'>
         <div class='info-section' id='work'>
-          <h3>Portfolio</h3>
+          <h2>What We've Done</h2>
           <div class="folio row">
-            <div class="folio-img">
+            <figure class="folio-img">
               <img src="resources/images/photo1.jpeg" alt="Image 1">
-              <h3>Company Name</h3>
-            </div>
-            <div class="folio-img">
+              <figcaption>
+                <h3>InnerG</h3>
+              </figcaption>
+            </figure>
+            <figure class="folio-img">
               <img src="resources/images/photo2.png" alt="Image 2">
-              <h3>Company Name</h3>
-            </div>
-            <div class="folio-img">
+              <figcaption>
+                <h3>EliteDesigns</h3>
+              </figcaption>
+            </figure>
+            <figure class="folio-img">
               <img src="resources/images/photo3.jpeg" alt="Image 3">
-              <h3>Company Name</h3>
-            </div>
-            <div class="folio-img">
+              <figcaption>
+                <h3>Pulse</h3>
+              </figcaption>
+            </figure>
+            <figure class="folio-img">
               <img src="resources/images/photo4.jpeg" alt="Image 4">
-              <h3>Company Name</h3>
-            </div>
-            <div class="folio-img">
+              <figcaption>
+                <h3>Wall-Ecommerce</h3>
+              </figcaption>
+            </figure>
+            <figure class="folio-img">
               <img src="resources/images/photo5.jpeg" alt="Image 5">
-              <h3>Company Name</h3>
-            </div>
-            <div class="folio-img">
+              <figcaption>
+                <h3>Organized Chaos Designs</h3>
+              </figcaption>
+            </figure>
+            <figure class="folio-img">
               <img src="resources/images/photo6.jpeg" alt="Image 6">
-              <h3>Company Name</h3>
-            </div>
-            <div class="folio-img">
+              <figcaption>
+                <h3>Productiv Marketing</h3>
+              </figcaption>
+            </figure>
+            <figure class="folio-img">
               <img src="resources/images/photo7.jpeg" alt="Image 7">
-              <h3>Company Name</h3>
-            </div>
-            <div class="folio-img">
+              <figcaption>
+                <h3>Create, Inc.</h3>
+              </figcaption>
+            </figure>
+            <figure class="folio-img">
               <img src="resources/images/photo8.jpg" alt="Image 8">
-              <h3>Company Name</h3>
-            </div>
+              <figcaption>
+                <h3>Cloud Vision Computing</h3>
+              </figcaption>
+            </figure>
           </div>
         </div>
         <div class='info-section' id='team'>
-          <h3>Team</h3>
-          <p>We're Hiring!</p>
+          <h2>Our Design Team</h2>
+          <div class='staff row'>
+            <figure class='staff-img'>
+              <img src="resources/images/staff2.jpeg" alt="Staff 2">
+              <figcaption>
+                <h4>Emília Nicomedes</h4>
+                <span class='job-title'>Lead Developer</span>
+              </figcaption>
+            </figure>
+            <figure class='staff-img'>
+              <img src="resources/images/staff1.jpeg" alt="Staff 1">
+              <figcaption>
+                <h4>Samson Barbara</h4>
+                <span class='job-title'>UX/UI Designer</span>
+              </figcaption>
+            </figure>
+            <figure class='staff-img'>
+              <img src="resources/images/staff3.jpeg" alt="Staff 3">
+              <figcaption>
+                <h4>Mari Adetokunbo</h4>
+                <span class='job-title'>UX/UI Designer</span>
+              </figcaption>
+            </figure>
+            <figure class='staff-img'>
+              <img src="resources/images/staff4.jpeg" alt="Staff 4">
+              <figcaption>
+                <h4>Lawson Alda</h4>
+                <span class='job-title'>Full-Stack Developer</span>
+              </figcaption>
+            </figure>
+          </div>
+          <h3 id='hiring'><a href="#">We're Hiring!</a></h3>
         </div>
         <div class='info-section' id='contact'>
-          <h3>Contact</h3>
-          <p><i class='fa fa-phone'></i> (555) 555-5555</p>
-          <p><i class='fa fa-envelope-o'></i> test@example.com</p>
-          <p><i class='fa fa-twitter'></i> @test</p>
+          <div class='contact-col'>
+            <h3>Find Us</h3>
+            <p><i class='fa fa-phone' aria-hidden="true"></i> Call us at <a href='tel:555-555-5555'>555.555.5555</a></p>
+            <p><i class='fa fa-envelope-o' aria-hidden="true"></i> Email us at <a href='mailto:test@example.com'>test@example.com</a></p>
+            <p><i class="fa fa-map-marker" aria-hidden="true"></i> 123 S Main St, Nowhere, AK 45678</p>
+            <nav>
+              <a href="#"><i class="fa fa-facebook-square fa-lg"></i></a>
+              <a href="#"><i class="fa fa-google-plus-square fa-lg"></i></a>
+              <a href="#"><i class="fa fa-twitter-square fa-lg"></i></a>
+              <a href="#"><i class="fa fa-dribbble fa-lg"></i></a>
+              <a href="#"><i class="fa fa-medium fa-lg"></i></a>
+            </nav>
+          </div>
+          <div class='contact-col'>
+            <h3>Contact Us</h3>
+            <form>
+              <label for='contact-name'>Name</label>
+              <input type='text' id='contact-name' />
+              <label for='contact-email'>Email Address</label>
+              <input type='text' id='contact-email' />
+              <label for='contact-phone'>Phone Number</label>
+              <input type='text' id='contact-phone' />
+              <label for='contact-request'>What are your needs?</label>
+              <textarea id='contact-request' rows="4"></textarea>
+              <input type="button" name="sendMessage" value="Send a Message" />
+            </form>
+          </div>
         </div>
       </div>
     </main>
     <footer>
-      <span class='copyright'>&copy; Broadway 2017</span>
-      <nav>
-        <a href='index.html'>Home</a>
-        <a href='process.html'>Process</a>
-        <a href='work.html'>Work</a>
-        <a href='team.html'>Team</a>
-        <a href='contact.html'>Contact</a>
-      </nav>
+      <div class='copyright-row'>
+        <span class='copyright'>&copy; 2017 Broadway Design. All rights reserved.</span>
+        <nav>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms and Conditions</a>
+        </nav>
+      </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src='resources/js/mobilemenu.js'></script>
+    <script type="text/javascript" src='resources/js/fixedHeader.js'></script>
   </body>
 </html>

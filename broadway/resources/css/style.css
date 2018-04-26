@@ -1,10 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Fauna+One|Raleway");
 /* General Styles */
 * {
   transition: all 0.4s ease; }
 
 body {
-  text-align: center;
-  font-family: Helvetica;
   display: flex;
   flex-direction: column;
   min-height: 100vh; }
@@ -16,12 +15,23 @@ footer {
 main {
   flex: 1 0 auto; }
 
+h1, h2, h3, h4, h5, h6, h7 {
+  font-family: Raleway;
+  text-align: center; }
+
+div, span, p, li, label, input, textarea, figcaption {
+  font-family: "Fauna One"; }
+
 /* Header Styles */
 header {
-  background-image: url("https://jelliott0222.github.io/broadway/resources/images/the-flatiron-building.jpg");
-  background-position: center;
+  background: url("https://jelliott0222.github.io/broadway/resources/images/the-flatiron-building.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   padding: 20px 10px;
-  position: relative; }
+  position: relative;
+  min-height: 100vh; }
   header::before {
     position: absolute;
     top: 0;
@@ -34,34 +44,51 @@ header {
     content: " "; }
   header * {
     position: relative; }
-  header .logo-nav-bar {
+  header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; }
-  header h1 {
-    font-size: 48px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 1px 1px 5px #333; }
-  header nav ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center; }
-  header nav a {
-    padding: 10px 20px;
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-    border-bottom: 2px solid transparent; }
-    header nav a:hover {
-      border-bottom: 2px solid #fff; }
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9); }
+    header nav h1 {
+      float: left; }
+      header nav h1 a {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 1px 1px 5px #333;
+        text-decoration: none;
+        color: white;
+        display: block; }
+    header nav ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px; }
+    header nav ul a,
+    header nav .mobile-only a {
+      padding: 10px 20px;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      border-bottom: 2px solid transparent; }
+      header nav ul a:hover,
+      header nav .mobile-only a:hover {
+        border-bottom: 2px solid #fff; }
   header .motto {
     padding: 300px 0; }
     header .motto h2 {
-      font-size: 3rem; }
+      font-size: 4rem; }
     header .motto h3 {
-      font-size: 2rem; }
+      font-size: 2.5rem; }
     header .motto h2, header .motto h3 {
       text-shadow: 1px 1px 2px #333;
       color: #fff; }
@@ -79,7 +106,7 @@ main h3 {
   font-weight: bold;
   margin: 1rem 0 0.5rem; }
 main p {
-  font-size: 14px; }
+  font-size: 1.25rem; }
 
 /* Our Process */
 #ourProcess {
@@ -89,32 +116,43 @@ main p {
 .row {
   display: flex;
   justify-content: center;
-  padding: 30px 0; }
+  padding: 30px 0;
+  flex-wrap: wrap; }
 
 .process-item {
-  border-right: 1px solid #ccc;
   padding: 10px 30px;
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
   justify-content: flex-end; }
+  .process-item:first-child img {
+    height: 35px; }
+  .process-item:nth-child(2) img {
+    height: 66px; }
+  .process-item:last-child img {
+    height: 52px; }
+  .process-item img {
+    width: auto; }
+  .process-item .process-item-description h3 {
+    font-size: 2rem; }
 
 /*.process-item:hover {
   background-color: #ddd;
   color: #fff;
 }*/
-.process-item:last-child {
-  border-right: none; }
-
 /* Designed Border */
 #designed {
-  background-image: url("https://jelliott0222.github.io/broadway/resources/images/nyc.jpeg");
-  background-position: center;
-  font-size: 23px;
+  background: url("https://jelliott0222.github.io/broadway/resources/images/nyc.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-size: 50px;
   font-weight: bold;
   color: #fff;
   text-shadow: 1px 1px 8px #333;
-  padding: 160px 0; }
+  text-align: center;
+  padding: 100px; }
 
 /* Info Sections */
 #info {
@@ -122,109 +160,232 @@ main p {
   flex-direction: column; }
 
 .info-section {
-  padding: 100px 0;
+  padding: 50px 0;
   color: #5B565D; }
   .info-section:nth-child(2) {
     background-color: #5B565D;
     color: #fff; }
   .info-section p {
     padding: 10px 0; }
+  .info-section#team .staff-img {
+    min-width: 200px;
+    max-width: 300px;
+    margin: 10px;
+    width: 25%;
+    height: 25%;
+    border-radius: 100%;
+    position: relative; }
+    .info-section#team .staff-img img {
+      border-radius: 50%; }
+    .info-section#team .staff-img figcaption {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: block;
+      width: 100%;
+      text-align: center;
+      vertical-align: middle;
+      padding: 40px 0px;
+      opacity: 0; }
+      .info-section#team .staff-img figcaption h4 {
+        font-size: 1.2rem; }
+    .info-section#team .staff-img:hover figcaption {
+      opacity: 1; }
+  .info-section#team h3#hiring a {
+    text-decoration: none;
+    background-color: #fff;
+    color: #5b565d;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-weight: 100;
+    display: inline-block;
+    box-shadow: 0px 2px 2px #333; }
+    .info-section#team h3#hiring a:hover {
+      background-color: #ccc;
+      box-shadow: 0px 2px 2px #333; }
+  .info-section#contact .contact-col {
+    width: 50%;
+    box-sizing: border-box;
+    float: left;
+    padding: 40px; }
+    .info-section#contact .contact-col:last-child {
+      border-left: 1px solid #ccc; }
+    .info-section#contact .contact-col nav {
+      margin: 10px 0 0; }
+      .info-section#contact .contact-col nav a {
+        font-size: 1.5rem;
+        margin: 0 5px;
+        color: #333; }
+        .info-section#contact .contact-col nav a:hover .fa-facebook-square {
+          color: #3b5998; }
+        .info-section#contact .contact-col nav a:hover .fa-google-plus-square {
+          color: #db4437; }
+        .info-section#contact .contact-col nav a:hover .fa-twitter-square {
+          color: #1da1f2; }
+        .info-section#contact .contact-col nav a:hover .fa-dribbble {
+          color: #ea4c89; }
+        .info-section#contact .contact-col nav a:hover .fa-medium {
+          color: #02b875; }
+    .info-section#contact .contact-col form label {
+      text-align: left;
+      margin: 10px auto 3px; }
+    .info-section#contact .contact-col form input,
+    .info-section#contact .contact-col form textarea {
+      padding: 5px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      outline: none; }
+    .info-section#contact .contact-col form input,
+    .info-section#contact .contact-col form label,
+    .info-section#contact .contact-col form textarea {
+      display: block;
+      width: 100%;
+      max-width: 600px;
+      box-sizing: border-box; }
+    .info-section#contact .contact-col form textarea {
+      font-size: 1.5rem; }
+    .info-section#contact .contact-col form input[type="button"] {
+      margin: 20px auto 0;
+      background-color: #5B565D;
+      color: #fff;
+      border: 2px solid #5B565D; }
+      .info-section#contact .contact-col form input[type="button"]:hover {
+        background-color: #fff;
+        color: #5B565D; }
+  .info-section#contact p {
+    font-size: 1.2rem; }
 
-.folio.row {
+.folio.row,
+.staff.row {
   flex-wrap: wrap; }
 
-.folio-img {
-  width: 25%;
-  height: 190px;
+.folio-img,
+.staff-img {
+  flex: 1 0 25%;
+  height: auto;
   overflow: hidden; }
-  .folio-img img {
-    width: 100%; }
+  .folio-img img,
+  .staff-img img {
+    width: 100%;
+    height: 100%; }
+
+.folio-img {
+  position: relative;
+  min-width: 300px;
+  margin: 3px; }
+  .folio-img:hover img {
+    transform: scale(1.1, 1.1); }
+  .folio-img figcaption {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0; }
+    .folio-img figcaption h3 {
+      color: #fff;
+      top: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .folio-img figcaption:hover {
+      opacity: 1; }
 
 /* Footer Styles */
 footer {
   font-size: 11px;
   background-color: #5B565D;
-  padding: 50px;
+  padding: 20px;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap; }
   footer span {
     color: rgba(255, 255, 255, 0.6); }
-  footer nav {
+  footer > nav {
     display: flex;
-    justify-content: space-around;
-    align-items: center; }
-    footer nav a {
-      color: rgba(255, 255, 255, 0.6);
-      padding: 0 10px;
-      text-decoration: none;
-      font-size: 0.9rem; }
-      footer nav a:hover {
-        color: white;
-        text-decoration: underline; }
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px; }
+  footer .copyright-row {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%; }
+  footer a {
+    color: rgba(255, 255, 255, 0.6);
+    padding: 0 10px;
+    text-decoration: none;
+    font-size: 0.9rem; }
+    footer a:hover {
+      color: white; }
 
 /* Media Queries */
 @media only screen and (max-width: 900px) {
+  header nav h1 a {
+    font-size: 24px; }
   header nav ul {
     display: none;
-    position: absolute;
-    top: 100px;
-    left: 0;
-    background-color: #5B565D;
-    width: 100%; }
-
-  .mobile-only,
-  .mobile-only a {
+    right: 0;
+    clear: both;
+    width: 100%;
+    margin-top: 15px;
+    border-top: 1px solid #fff;
+    text-align: center;
+    transition: all 0.5s ease; }
+    header nav ul.active {
+      display: block; }
+    header nav ul li a {
+      padding: 10px 20px;
+      display: block;
+      border-bottom: none; }
+      header nav ul li a:hover {
+        background-color: #fff;
+        color: #5B565D;
+        border-bottom: none; }
+  header nav .mobile-only,
+  header nav .mobile-only a,
+  header nav .mobile-only a:hover {
     display: block;
-    border-bottom: none; }
-
-  header nav a,
-  header nav a:hover {
-    border-bottom: none; }
-
-  header nav ul.active {
-    display: flex;
-    flex-direction: column; }
-
-  header nav ul li {
-    display: block;
-    width: 100%; }
-
-  header nav ul li a {
-    padding: 10px 0;
-    display: block; }
-
-  header nav ul li a:hover {
-    background-color: #fff;
-    color: #5B565D; } }
+    border-bottom: none; } }
+@media only screen and (max-width: 750px) {
+  .info-section#contact .contact-col {
+    width: 100%; } }
 @media only screen and (max-width: 600px) {
-  header h1 {
-    font-size: 24px; }
-
-  header .motto {
+  header nav ul {
+    width: 100%;
+    clear: both; }
+  header.motto {
     padding: 100px 0; }
 
   .row {
     flex-wrap: wrap; }
 
-  .process-item {
-    flex-basis: 100%;
-    margin: 0;
-    padding: 20px 0;
-    border-radius: 0;
-    border: none;
-    border-top: 1px solid #ccc; }
+  .process-item .process-item-description h3 {
+    font-size: 1.5rem; }
 
-  .process-item:last-of-type {
-    border-bottom: 1px solid #ccc; }
+  footer .copyright-row {
+    flex-direction: column-reverse;
+    flex-wrap: wrap; }
+    footer .copyright-row nav {
+      flex-direction: column;
+      margin-bottom: 20px;
+      width: 100%;
+      display: inline-flex; }
+      footer .copyright-row nav a {
+        padding: 5px 0; } }
+@media only screen and (max-width: 300px) {
+  #designed {
+    font-size: 1rem; }
 
-  footer {
-    flex-direction: column-reverse; }
-
-  footer nav {
-    flex-direction: column;
-    margin-bottom: 20px; }
-
-  footer nav a {
-    padding: 5px 0; } }
+  .folio-img {
+    flex: 1 0 100%;
+    min-width: auto; } }
 
 /*# sourceMappingURL=style.css.map */
