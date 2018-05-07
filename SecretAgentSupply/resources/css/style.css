@@ -1,352 +1,436 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab");
+/* Variables */
+/* General Styles */
 html, body {
   font-size: 18px;
-  font-family: Helvetica;
-}
+  font-family: Roboto; }
 
 .container {
   margin: 0px auto;
   max-width: 960px;
   width: 100%;
-  display: flex;
-}
+  display: flex; }
 
 .mobile-only {
-  display: none;
-}
+  display: none; }
 
-
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Roboto Slab"; }
 
 /*Header Styles*/
-
-header .logo {
-  background-color: black;
-  padding: 0.66rem 0rem;
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: white;
-}
-
-header .logo .container {
-  align-items: center;
-  justify-content: flex-start;
-}
-
-header .logo img {
-  height: 1.5rem;
-  margin-left: 0.5rem;
-  margin-right: 1rem;
-}
-
-header .logo a {
-  text-decoration: none;
-  color: #fff;
-}
-
-header .main-image {
-  background-image: url(https://jelliott0222.github.io/SecretAgentSupply/resources/images/moto.jpeg);
-  background-size: cover;
-  height: 25rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-header .main-image .container {
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 9rem;
-}
-
-header .main-image .new-arrival {
-  background-color: rgba(0,0,0,0.8);
-  padding: 2rem 3rem;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  flex-wrap: wrap;
-  max-width: 20rem;
-}
-
-.main-image h1, .main-image h2 {
-  display: block;
-  width: 100%;
-}
-
-.main-image h1 {
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
-}
-
-.main-image h2 {
-  font-size: 2rem;
-}
-
-
-
-/*Navigation*/
-
-header nav {
-  background-color: firebrick;
-}
-
-header nav .container {
-  align-items: center;
-  justify-content: space-between;
-}
-
-header nav ul {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header nav span {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-}
-
-header nav span a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 0.75rem 0rem;
-  display: block;
-}
-
-header nav ul li {
-  flex-grow: 1;
-  text-align: center;
-}
-
-header nav ul li a {
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 0.75rem 0rem;
-  display: block;
-}
-
-header nav a:hover {
-  background-color: #fff;
-  color: firebrick;
-}
-
-
+header {
+  /*Navigation*/ }
+  header .logo-nav-bar {
+    background-color: black;
+    font-size: 1rem;
+    color: white; }
+    header .logo-nav-bar .container {
+      align-items: center;
+      justify-content: space-between; }
+    header .logo-nav-bar .logo a {
+      display: flex;
+      align-items: center; }
+      header .logo-nav-bar .logo a img {
+        height: 1.5rem;
+        margin-left: 0.5rem;
+        margin-right: 1rem; }
+    header .logo-nav-bar .mobile-only {
+      display: none; }
+    header .logo-nav-bar .nav-menu ul {
+      display: flex;
+      justify-content: space-between; }
+      header .logo-nav-bar .nav-menu ul li a {
+        padding: 1rem 0.5rem;
+        display: block; }
+        header .logo-nav-bar .nav-menu ul li a:hover {
+          background-color: white;
+          color: black; }
+      header .logo-nav-bar .nav-menu ul li.cart {
+        border-left: 1px solid #555; }
+        header .logo-nav-bar .nav-menu ul li.cart a {
+          padding: 1rem; }
+          header .logo-nav-bar .nav-menu ul li.cart a:hover {
+            background-color: firebrick;
+            color: white; }
+  header .main-image {
+    background-image: url(https://jelliott0222.github.io/SecretAgentSupply/resources/images/moto.jpeg);
+    background-size: cover;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; }
+    header .main-image .container {
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 9rem; }
+    header .main-image .new-arrival {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 2rem 3rem;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      flex-wrap: wrap;
+      max-width: 20rem; }
+    header .main-image h1,
+    header .main-image h2 {
+      display: block;
+      width: 100%; }
+    header .main-image h1 {
+      font-size: 1.5rem;
+      color: #e05a5a;
+      margin-bottom: 0.25rem; }
+    header .main-image h2 {
+      font-size: 2rem; }
+  header nav {
+    background-color: black; }
+    header nav .container {
+      align-items: center;
+      justify-content: space-between; }
+    header nav ul {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      header nav ul li {
+        flex-grow: 1;
+        text-align: center; }
+        header nav ul li a {
+          font-weight: bold;
+          padding: 0.75rem 0rem;
+          display: block; }
+          header nav ul li a:hover {
+            background-color: white;
+            color: black; }
+    header nav span {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center; }
+      header nav span a {
+        font-weight: bold;
+        padding: 0.75rem 0rem;
+        display: block; }
 
 /*Mobile Menu*/
-
 .toggle-menu {
   display: none;
-  width: 100%;
   text-align: center;
-  text-decoration: none;
-  padding: 1rem;
-  color: #fff;
-}
-
-
+  padding: 1rem; }
 
 /*Main Styles*/
-
 main {
-  padding: 3rem 0rem 4rem;
-  background-color: #eee;
-}
-
-main .container {
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-main .img-container {
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background-color: #fff;
-  width: 30%;
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-main .img-container:hover {
-  border-color: #555;
-}
-
-main .img-container .product-image {
-  padding: 2rem 0rem;
-  height: 9rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-}
-
-main .img-container .product-image img {
-  max-width: 8em;
-}
-
-main .img-container span {
-  width: 100%;
-  background-color: #fff;
-  color: firebrick;
-  display: block;
-  text-align: center;
-  padding: 0.5rem 0rem;
-}
-
-main .img-container:hover span {
-  width: 100%;
-  background-color: firebrick;
-  color: #fff;
-  display: block;
-  text-align: center;
-  padding: 0.5rem 0rem;
-}
-
-main .info-row {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 3rem;
-}
-
-main .info-row .info {
-  margin: 0 10px;
-}
-
-main .info-row .info h3 {
-  color: #333;
-  border-bottom: 2px solid #333;
-  padding: 1rem 2rem;
-}
-
-main .info-row .info > span {
-  padding: 5px 0px;
-  display: block;
-  text-align: center;
-}
-
-
+  padding: 3rem 0rem 0rem;
+  background-color: #eee; }
+  main section.container {
+    flex-wrap: wrap; }
+    main section.container h3 {
+      background-color: #871a1a;
+      color: white;
+      font-size: 2rem;
+      padding: 10px;
+      width: 100%; }
+    main section.container article {
+      background-color: white;
+      box-shadow: 0px 3px 3px #ccc;
+      width: 100%;
+      margin: 0.25rem 0;
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      overflow: hidden; }
+      main section.container article .img-container,
+      main section.container article .article-details {
+        padding: 2rem;
+        box-sizing: border-box; }
+      main section.container article .img-container {
+        width: 40%;
+        padding-right: 0rem; }
+        main section.container article .img-container img {
+          width: 100%; }
+      main section.container article .article-details {
+        width: 60%; }
+        main section.container article .article-details h4 {
+          font-size: 1.5rem;
+          padding: 0.5rem 0; }
+        main section.container article .article-details span {
+          display: inline-block;
+          padding: 0.5rem 0rem;
+          color: black; }
+          main section.container article .article-details span.product-title {
+            font-size: 1.5rem;
+            width: 100%; }
+          main section.container article .article-details span.product-price {
+            font-size: 1rem;
+            width: 100%;
+            color: #999; }
+          main section.container article .article-details span.product-button {
+            background-color: firebrick;
+            color: white;
+            border-radius: 15px;
+            padding: 1rem;
+            margin: 1rem 0;
+            cursor: pointer;
+            transition: all 0.3s ease; }
+            main section.container article .article-details span.product-button:hover {
+              background-color: #5c1212; }
+        main section.container article .article-details .view-more-details,
+        main section.container article .article-details .supplies-close-button {
+          display: none; }
+        main section.container article .article-details .class-line {
+          display: flex;
+          justify-content: flex-start; }
+          main section.container article .article-details .class-line i,
+          main section.container article .article-details .class-line span {
+            float: left;
+            font-size: 1rem; }
+          main section.container article .article-details .class-line i {
+            margin-right: 1rem;
+            padding: 0.5rem 0 0.5rem 0.5rem;
+            color: firebrick; }
+          main section.container article .article-details .class-line span {
+            padding: 0.5rem;
+            width: 100%; }
+        main section.container article .article-details .class-text {
+          padding: 0.5rem; }
+          main section.container article .article-details .class-text li {
+            padding: 0.25rem 0; }
+            main section.container article .article-details .class-text li i {
+              margin-right: 0.5rem;
+              color: firebrick; }
+      main section.container article .class-container {
+        width: 100%;
+        padding: 2rem; }
+    main section.container.classes-row {
+      margin-top: 3rem; }
+  main .feedback-banner {
+    background-color: firebrick;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+    margin: 3rem 0 0; }
+    main .feedback-banner p,
+    main .feedback-banner a {
+      display: inline-block; }
+    main .feedback-banner a {
+      padding: 0.5rem 1rem;
+      margin: 0.25rem 0 0 0.5rem;
+      border: 1px solid #fff;
+      border-radius: 0.5rem;
+      background-color: #fff;
+      color: firebrick;
+      font-family: inherit; }
+      main .feedback-banner a:hover {
+        background-color: firebrick;
+        color: white; }
 
 /*Footer Styles*/
-
 footer {
-  height: 5rem;
   background-color: black;
   color: white;
   font-size: 0.75em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
+  padding: 2rem; }
+  footer .container {
+    display: flex;
+    flex-wrap: wrap; }
+    footer .container .newsletter-signup {
+      padding: 0 0 2rem; }
+      footer .container .newsletter-signup p {
+        font-size: 1rem;
+        padding-bottom: 1rem; }
+      footer .container .newsletter-signup div {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex; }
+        footer .container .newsletter-signup div input[name='newsletter-signup-field'] {
+          box-sizing: border-box;
+          padding: 0.5rem;
+          font-size: 1rem;
+          flex: 1 0 auto;
+          width: 1%;
+          border: none; }
+        footer .container .newsletter-signup div .signup-btn {
+          box-sizing: border-box;
+          padding: 0.5rem;
+          font-size: 1rem;
+          line-height: 1rem;
+          background-color: firebrick;
+          color: white; }
+    footer .container section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      padding: 1rem 0; }
+      footer .container section .footer-info {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column; }
+        footer .container section .footer-info a {
+          font-size: 1rem;
+          padding: 0.5rem;
+          font-family: Roboto; }
+          footer .container section .footer-info a:hover {
+            color: #e05a5a; }
+        footer .container section .footer-info h3 {
+          font-size: 1.5rem;
+          color: #e05a5a;
+          padding: 0 0 1rem; }
+        footer .container section .footer-info .contact-line {
+          display: flex;
+          justify-content: flex-start; }
+          footer .container section .footer-info .contact-line i,
+          footer .container section .footer-info .contact-line span {
+            float: left;
+            font-size: 1rem; }
+          footer .container section .footer-info .contact-line i {
+            margin-right: 1rem;
+            padding: 0.5rem 0 0.5rem 0.5rem; }
+          footer .container section .footer-info .contact-line span {
+            padding: 0.5rem;
+            word-break: break-all; }
+      footer .container section .social-links a {
+        font-size: 1.2rem;
+        padding: 0 0.5rem; }
+        footer .container section .social-links a:hover {
+          color: #e05a5a; }
 
 /*Media Queries*/
-
 @media only screen and (max-width: 1024px) {
-  main .img-container {
-    width: 47%;
-    margin: 0.5rem;
-    flex: 1 0 auto;
-  }
-
   header nav .container {
     flex-wrap: wrap;
-    position: relative;
-  }
+    position: relative; }
+    header nav .container a {
+      display: block; }
+    header nav .container ul {
+      display: block;
+      overflow: hidden;
+      height: 0;
+      position: absolute;
+      top: 100%;
+      transition: all 0.3s ease; }
+      header nav .container ul li {
+        display: block;
+        background-color: #333; }
+        header nav .container ul li a {
+          display: block;
+          padding: 5px; }
+      header nav .container ul.active {
+        height: 100%;
+        overflow: visible; }
 
-  header nav ul {
-    display: block;
-    overflow: hidden;
-    height: 0;
+  main section.container article.product-container {
+    width: 50%; }
+    main section.container article.product-container .img-container {
+      width: 100%;
+      margin: 0rem;
+      padding: 2rem 2rem 0;
+      flex: 1 0 auto; }
+    main section.container article.product-container .article-details {
+      width: 100%; } }
+@media only screen and (max-width: 750px) {
+  header .logo-nav-bar .mobile-only {
+    display: block; }
+  header .logo-nav-bar .nav-menu {
+    display: none;
     position: absolute;
-    top: 100%;
-    transition: all 0.3s ease;
-  }
+    top: 3rem;
+    width: 100%;
+    height: calc(100% - 3rem);
+    background-color: black; }
+    header .logo-nav-bar .nav-menu.active {
+      display: block; }
+    header .logo-nav-bar .nav-menu ul {
+      flex-direction: column;
+      padding: 2rem 0 0; }
+      header .logo-nav-bar .nav-menu ul li a {
+        text-align: center;
+        font-size: 3rem; }
 
-  header nav ul li {
-    display: block;
-    background-color: #333;
-  }
-
-  .toggle-menu {
-    display: block;
-  }
-
-  nav ul a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    font-family: Calibri;
-    padding: 5px;
-  }
-
-  nav ul.active {
-    height: 100%;
-    overflow: visible;
-  }
-}
-
+  footer section {
+    flex-direction: column; }
+    footer section .footer-info:first-child {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin: 0 0 1rem; }
+      footer section .footer-info:first-child h3 {
+        width: 100%; }
+    footer section .social-links {
+      margin: 2rem auto 0; } }
+@media only screen and (max-width: 550px) {
+  main section.container article.class-container {
+    position: relative; }
+    main section.container article.class-container .img-container {
+      width: 100%;
+      padding: 0rem; }
+    main section.container article.class-container .article-details {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 2rem;
+      font-weight: bold; }
+      main section.container article.class-container .article-details span.product-button {
+        font-weight: normal; } }
 @media only screen and (max-width: 470px) {
   header .main-image {
-    height: 15rem;
-  }
+    height: 15rem; }
+    header .main-image .container {
+      margin-top: 10rem;
+      width: 100%; }
+    header .main-image .new-arrival {
+      padding: 1rem 2rem;
+      width: 100%;
+      max-width: 100%; }
+    header .main-image h1 {
+      font-size: 0.77rem; }
+    header .main-image h2 {
+      font-size: 1rem; }
 
-  header .main-image .container {
-    margin-top: 10rem;
-    width: 100%;
-  }
-
-  header .main-image .new-arrival {
-    padding: 1rem 2rem;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .main-image h1 {
-    font-size: 0.77rem;
-  }
-
-  .main-image h2 {
-    font-size: 1rem;
-  }
-
-  main .container {
-    justify-content: center;
-  }
-
-  main .img-container {
-    width: 90%;
-  }
-
-  main .info-row {
-    flex-wrap: wrap;
-  }
-
-  main .info-row .info {
-    width: 90%;
-    margin-bottom: 0.5rem;
-  }
-
-  main .info-row .info h3 {
-    display: inline;
-    border-bottom: 0;
-    padding: 1rem 0;
-  }
-
-  main .info-row .info span {
-    display: inline;
-  }
+  main section.container {
+    justify-content: center; }
+    main section.container article.product-container {
+      width: 100%; }
 
   .copyright {
-    margin: 0px auto;
-  }
-}
+    margin: 0px auto; } }
+@media only screen and (max-width: 400px) {
+  main section.container article .article-details .view-more-details {
+    display: block;
+    text-decoration: underline; }
+  main section.container article .article-details .class-more-details {
+    display: none; }
+    main section.container article .article-details .class-more-details.active {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      position: absolute;
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 0 2rem;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white; }
+    main section.container article .article-details .class-more-details .supplies-close-button {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 1rem;
+      font-size: 2rem;
+      color: white; }
+    main section.container article .article-details .class-more-details .class-text .class-supplies,
+    main section.container article .article-details .class-more-details .class-line .class-prereq {
+      color: white; } }
+
+/*# sourceMappingURL=style.css.map */

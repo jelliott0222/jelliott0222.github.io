@@ -8,16 +8,29 @@
     <link rel="stylesheet" href="resources/css/reset.css">
     <link rel="stylesheet" href="resources/css/style.css">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src='resources/js/mobilemenu.js'></script>
-
   </head>
   <body>
     <header>
-      <div class="logo">
+      <div class="logo-nav-bar">
         <div class="container">
-          <img src="resources/images/logo.png" alt="logo">
-          <a href="index.html"><span>Secret Agent Supply Inc.</span></a>
+          <div class="logo">
+            <a href="index.html">
+              <img src="resources/images/logo.png" alt="logo">
+              <span>Secret Agent Supply Inc.</span>
+            </a>
+          </div>
+          <div class='mobile-only toggle-menu'>
+            <a href="#">Menu</a>
+          </div>
+          <div class="nav-menu">
+            <ul>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Classes</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li class='cart'><a href="#">0 items <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="main-image">
@@ -28,56 +41,241 @@
           </div>
         </div>
       </div>
-      <nav>
-        <div class="container">
-          <a href="#" class="toggle-menu hidden-lg">Menu</a>
-          <ul>
-            <li><a href="#">Eyewear</a></li>
-            <li><a href="#">Apparel</a></li>
-            <li><a href="#">Gadgets</a></li>
-            <li><a href="#">Vehicles</a></li>
-            <li><a href="#">Classes</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
     </header>
     <main>
-      <div class="img-row container">
-        <div class="img-container">
-          <div class="product-image">
-            <img src="resources/images/pen.png" alt="Exploding Pen">
+      <section class="img-row container">
+        <h3>Featured Products</h3>
+        <article class="product-container">
+          <div class="img-container">
+            <img src="resources/images/motorcycle-gear.jpeg" />
           </div>
-          <span>Exploding Pen</span>
-        </div>
-        <div class="img-container">
-          <div class="product-image">
-            <img src="resources/images/watch.png" alt="Cellular Watch">
+          <div class="article-details">
+            <span class='product-title'>Custom Motorcycles</span>
+            <span class='product-price'>Starting at $12,999.99</span>
+            <span class='product-button'>Shop Now</span>
           </div>
-          <span>Cellular Watch</span>
-        </div>
-        <div class="img-container">
-          <div class="product-image">
-            <img src="resources/images/glasses.png" alt="Thermal Glasses">
+        </article>
+        <article class="product-container">
+          <div class="img-container">
+            <img src="resources/images/pen.jpeg" alt="Exploding Pen">
           </div>
-          <span>Thermal Glasses</span>
-        </div>
-      </div>
-      <div class="info-row container">
-        <div class="location info">
-          <h3><i class='fa fa-map-marker'></i> <span>Location</span></h3>
-          <span>-47.346436, 84.32354</span>
-        </div>
-        <div class="hours info">
-          <h3><i class='fa fa-clock-o'></i> <span>Hours</span></h3>
-          <span>0800-1800</span>
-        </div>
+          <div class="article-details">
+            <span class='product-title'>Exploding Pens</span>
+            <span class='product-price'>Starting at $24.99</span>
+            <span class='product-button'>Shop Now</span>
+          </div>
+        </article>
+        <article class="product-container">
+          <div class="img-container">
+            <img src="resources/images/watch.jpeg" alt="Cellular Watch">
+          </div>
+          <div class="article-details">
+            <span class='product-title'>Cellular Watches</span>
+            <span class='product-price'>Starting at $49.99</span>
+            <span class='product-button'>Shop Now</span>
+          </div>
+        </article>
+        <article class="product-container">
+          <div class="img-container">
+            <img src="resources/images/glasses.jpeg" alt="Thermal Glasses">
+          </div>
+          <div class="article-details">
+            <span class='product-title'>Thermal Glasses</span>
+            <span class='product-price'>Starting at $14.99</span>
+            <span class='product-button'>Shop Now</span>
+          </div>
+        </article>
+      </section>
+      <section class="classes-row container">
+        <h3>Classes</h3>
+        <article class="class-container">
+          <div class='img-container'>
+            <img src="resources/images/beginner.jpeg" alt="">
+          </div>
+          <div class='article-details'>
+            <h4 class='class-name'>Intro to Motorcycles</h4>
+            <div class='class-line'>
+              <i class="fa fa-calendar-o fa-fw" aria-hidden="true"></i>
+              <span class='class-date'>October 28, 2018</span>
+            </div>
+            <div class='class-line'>
+              <i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>
+              <span class='class-time'>9:00 a.m. - 1:00 p.m.</span>
+            </div>
+            <div class='class-line'>
+              <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>
+              <span class='class-location'>Pittsburgh, PA</span>
+            </div>
+            <div class='class-line'>
+              <i class="fa fa-user fa-fw" aria-hidden="true"></i>
+              <span class='class-spots-available'>3 spots available</span>
+            </div>
+            <div class='class-line'>
+              <i class="fa fa-usd fa-fw" aria-hidden="true"></i>
+              <span class='class-cost'>39.99</span>
+            </div>
+            <span class='view-more-details'>View More Details</span>
+            <div class="class-more-details">
+              <span class='supplies-close-button'><i class="fa fa-times" aria-hidden="true"></i></span>
+              <div class='class-text'>
+                <span class='class-supplies' onclick="openSupplies()">Supplies Needed</span>
+                <ul>
+                  <li><i class="fa fa-check-square fa-fw"></i>Motorcycle</li>
+                  <li><i class="fa fa-check-square fa-fw"></i>Helmet</li>
+                  <li><i class="fa fa-check-square fa-fw"></i>Elbow/knee pads</li>
+                  <li><i class="fa fa-check-square fa-fw"></i>License</li>
+                </ul>
+              </div>
+              <div class='class-line'>
+                <span class='class-prereq'>No Pre-requisite</span>
+              </div>
+            </div>
+            <span class='product-button' href='#'>Register Now <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </article>
+        <article class="class-container">
+          <div class='img-container'>
+            <img src="resources/images/intermediate.jpeg" alt="">
+          </div>
+          <div class='article-details'>
+            <h4 class='class-name'>Cruising Along</h4>
+            <div class='class-line'>
+              <i class="fa fa-calendar-o fa-fw" aria-hidden="true"></i>
+              <span class='class-date'>November 4, 2018</span>
+            </div>
+            <div class='class-line'>
+              <i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>
+              <span class='class-time'>9:00 a.m. - 1:00 p.m.</span>
+            </div>
+            <div class='class-line'>
+              <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>
+              <span class='class-location'>Philadelphia, PA</span>
+            </div>
+            <div class='class-line'>
+              <i class="fa fa-user fa-fw" aria-hidden="true"></i>
+              <span class='class-spots-available'>9 spots available</span>
+            </div>
+            <div class='class-line'>
+              <i class="fa fa-usd fa-fw" aria-hidden="true"></i>
+              <span class='class-cost'>59.99</span>
+            </div>
+            <span class='view-more-details'>View More Details</span>
+            <div class="class-more-details">
+              <span class='supplies-close-button'><i class="fa fa-times" aria-hidden="true"></i></span>
+              <div class='class-text'>
+                <span class='class-supplies' onclick="openSupplies()">Supplies Needed</span>
+                <ul>
+                  <li><i class="fa fa-check-square fa-fw"></i>Motorcycle</li>
+                  <li><i class="fa fa-check-square fa-fw"></i>Helmet</li>
+                  <li><i class="fa fa-check-square fa-fw"></i>Elbow/knee pads</li>
+                  <li><i class="fa fa-check-square fa-fw"></i>License</li>
+                </ul>
+              </div>
+              <div class='class-line'>
+                <span class='class-prereq'>Pre-requisite: Intro to Motorcycles</span>
+              </div>
+            </div>
+            <span class='product-button' href='#'>Register Now <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </article>
+        <article class="class-container">
+          <div class='img-container'>
+            <img src="resources/images/advanced.jpeg" alt="">
+          </div>
+          <div class='article-details'>
+            <h4 class='class-name'>Road Hogs</h4>
+            <div class='class-line'>
+              <i class="fa fa-calendar-o fa-fw" aria-hidden="true"></i>
+              <span class='class-date'>November 11, 2018</span>
+            </div>
+            <div class='class-line'>
+              <i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>
+              <span class='class-time'>9:00 a.m. - 1:00 p.m.</span>
+            </div>
+            <div class='class-line'>
+              <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i>
+              <span class='class-location'>Scranton, PA</span>
+            </div>
+            <div class='class-line'>
+              <i class="fa fa-user fa-fw" aria-hidden="true"></i>
+              <span class='class-spots-available'>11 spots available</span>
+            </div>
+            <div class='class-line'>
+              <i class="fa fa-usd fa-fw" aria-hidden="true"></i>
+              <span class='class-cost'>79.99</span>
+            </div>
+            <span class='view-more-details'>View More Details</span>
+            <div class="class-more-details">
+              <span class='supplies-close-button'><i class="fa fa-times" aria-hidden="true"></i></span>
+              <div class='class-text'>
+                <span class='class-supplies' onclick="openSupplies()">Supplies Needed</span>
+                <ul>
+                  <li><i class="fa fa-check-square fa-fw"></i>Motorcycle</li>
+                  <li><i class="fa fa-check-square fa-fw"></i>Helmet</li>
+                  <li><i class="fa fa-check-square fa-fw"></i>Elbow/knee pads</li>
+                  <li><i class="fa fa-check-square fa-fw"></i>License</li>
+                </ul>
+              </div>
+              <div class='class-line'>
+                <span class='class-prereq'>Pre-requisite: Cruising Along</span>
+              </div>
+            </div>
+            <span class='product-button' href='#'>Register Now <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </article>
+      </section>
+      <div class="feedback-banner">
+        <p>Have any feedback about the site? Want to make a suggestion for a feature or product?</p>
+        <a href="#">Leave your feedback</a>
       </div>
     </main>
     <footer>
       <div class="container">
-        <span class="copyright">&copy; Copyright Secret Agent Supply Inc.</span>
+        <div class="newsletter-signup">
+          <p>Sign up for our newsletter for sales, product releases, and more.</p>
+          <div class="">
+            <input type="email" name="newsletter-signup-field" placeholder="Enter your email address">
+            <span class='signup-btn'>Sign up</span>
+          </div>
+        </div>
+        <section>
+          <div class="footer-info">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Classes</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="footer-info">
+            <h3>Contact Us</h3>
+            <div class='contact-line'>
+              <i class='fa fa-fw fa-envelope-o' aria-hidden="true"></i> <span class='email'>support@secretagentsupply.com</span>
+            </div>
+            <div class='contact-line'>
+              <i class='fa fa-fw fa-phone'></i> <span class='phone'>800.623.5555</span>
+            </div>
+            <div class='contact-line'>
+              <i class='fa fa-fw fa-map-marker'></i> <span class='address'>326 S Broad Street<br />Nowhere, PA 62341</span>
+            </div>
+            <div class='contact-line'>
+              <i class='fa fa-fw fa-clock-o'></i> <span class='hours'>8:00 a.m. - 6:00 p.m. Monday - Saturday</span>
+            </div>
+          </div>
+        </section>
+        <section>
+          <span class="copyright">&copy; 2018 Secret Agent Supply Inc. All rights reserved.</span>
+          <div class="social-links">
+            <a href="#"><i class="fa fa-facebook-square fa-lg"></i></a>
+            <a href="#"><i class="fa fa-google-plus-square fa-lg"></i></a>
+            <a href="#"><i class="fa fa-twitter-square fa-lg"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </div>
+        </section>
       </div>
     </footer>
   </body>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src='resources/js/mobilemenu.js'></script>
 </html>
