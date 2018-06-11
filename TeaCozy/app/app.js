@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('teaCozy', [])
+  angular.module('teaCozy', ['ngRoute'])
   // .config(['$routeProvider', function($routeProvider){
   //   $routeProvider.
   //     when('/home', {
@@ -21,7 +21,11 @@
   //       redirectTo: '/home'
   //     });
   // }])
-  .controller('StoreController', ['$scope', function($scope) {
+  .controller('StoreController', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
+    $scope.$route = $route;
+    $scope.$location = $location;
+    $scope.$routeParams = $routeParams;
+
     $scope.products = [];
     $scope.cartItems = [];
 
@@ -71,6 +75,7 @@
       if(!product.inCart) {
         $scope.cartItems.push({name: product.name, quantity: 1, id: product.id, price: product.price, image: product.image});
         product.inCart = !product.inCart;
+        console.log($scope.cartItems);
       }
     };
 
@@ -90,6 +95,26 @@
       templateUrl: 'partials/featured-products.html',
       replace: true
     };
-  });
+  })
+  .controller('HomeController', function($scope, $routeParams) {
+    $scope.name = 'HomeController';
+    $scope.params = $routeParams;
+  })
+  .controller('CartController', ['$scope', '$routeParams', function($scope, $routeParams) {
+    $scope.name = 'CartController';
+    $scope.params = $routeParams;
+  }])
+  .config(['$routeProvider', function($routeProvider) {
+    $routeProvider
+    .when('/', {
+      templateUrl: 'partials/home.html',
+      controller: 'HomeController',
+      controllerAs: 'home'
+    })
+    .when('/cart', {
+      templateUrl: 'cart.html',
+      controller: 'StoreController-'
+    });
+  }]);
 
 })();
