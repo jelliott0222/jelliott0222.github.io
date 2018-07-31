@@ -1,8 +1,9 @@
 <div class="img-container" ng-repeat='product in products'>
   <img src="resources/images/{{product.image}}" alt="Fall Berry Blitz Tea" />
-  <div class='img-details'>
+  <div class="img-details">
     <h4>{{product.name}}</h4>
-    <span class='img-price'>${{product.price}}</span>
-    <a href="" ng-click="addCartItem(product)">{{product.inCart ? "Product Added" : "Add to Cart"}}</a>
+    <span class="img-price">${{product.price}}</span>
+    <!-- <a href="" ng-click="addCartItem(product)">{{product.inCart ? "Product Added" : "Add to Cart"}}</a> -->
+    <a href="#/shop">Shop</a>
   </div>
 </div>

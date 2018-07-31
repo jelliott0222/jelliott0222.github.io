@@ -1,8 +1,8 @@
-(function(){
+ (function(){
 
   'use strict';
 
-  angular.module('teaCozy', ['ngRoute'])
+  angular.module('teaCozy', ['ngRoute', 'cart', 'shop'])
   // .config(['$routeProvider', function($routeProvider){
   //   $routeProvider.
   //     when('/home', {
@@ -21,7 +21,7 @@
   //       redirectTo: '/home'
   //     });
   // }])
-  .controller('StoreController', ['$scope', '$route', '$routeParams', '$location', function($scope, $route, $routeParams, $location) {
+  .controller('StoreController', ['$scope', '$route', '$routeParams', '$location', function($scope, CommonProp, $route, $routeParams, $location) {
     $scope.$route = $route;
     $scope.$location = $location;
     $scope.$routeParams = $routeParams;
@@ -79,6 +79,14 @@
       }
     };
 
+    $scope.removeCartItem = function(item) {
+      if(item.quantity > 0) {
+        item.quantity = 0;
+        console.log($scope.cartItems);
+        console.log($scope.cartItems.length);
+      }
+    };
+
     $scope.cartSum = function() {
       var sum = 0;
       $scope.cartItems.forEach(function(item) {
@@ -88,7 +96,12 @@
       return sum;
     };
 
+    // $scope.$watch('products',function(){
+    //   CommonProp.setItem($scope.products);
+    // });
+
   }])
+
   .directive('featuredProducts', function() {
     return {
       restrict: 'E',
@@ -96,25 +109,34 @@
       replace: true
     };
   })
-  .controller('HomeController', function($scope, $routeParams) {
-    $scope.name = 'HomeController';
-    $scope.params = $routeParams;
-  })
-  .controller('CartController', ['$scope', '$routeParams', function($scope, $routeParams) {
-    $scope.name = 'CartController';
-    $scope.params = $routeParams;
-  }])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
-    .when('/', {
+    .when('/home', {
       templateUrl: 'partials/home.html',
-      controller: 'HomeController',
-      controllerAs: 'home'
+      controller: 'StoreController'
     })
-    .when('/cart', {
-      templateUrl: 'cart.html',
-      controller: 'StoreController-'
+    .otherwise({
+      redirectTo: '/home'
     });
-  }]);
+  }])
+  .service('CommonProp', function() {
+    var Items = '';
+    var Total = 0;
+
+    return {
+      getItems: function() {
+        return Items;
+      },
+      setItem: function(value) {
+        Items = value;
+      },
+      getTotal: function(){
+        return Total;
+      },
+      setTotal: function(value){
+        Total = value;
+      }
+    };
+  });
 
 })();

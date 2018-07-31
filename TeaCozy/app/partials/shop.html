@@ -1,0 +1,11 @@
+
+<div class='shop absolute-center flex'>
+  <h1>Our Products</h1>
+
+  <div ng-repeat="product in products" class="product-card flex">
+    <img src="resources/images/{{product.image}}" alt="" />
+    <h3>{{product.name}}</h3>
+    <h4>{{product.price}}</h4>
+    <a class='shop-btn' ng-click='addCartItem(product)'>{{product.inCart ? "Product Added" : "Add to Cart"}}</a>
+  </div>
+</div>
