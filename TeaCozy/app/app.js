@@ -83,8 +83,6 @@
         product.inCart = !product.inCart;
         $scope.cart.itemTotal++;
         $scope.cart.totalPrice = $scope.cart.totalPrice + product.price;
-        console.log($scope.cart.items);
-        console.log($scope.cart.totalPrice);
       }
     };
 
@@ -94,8 +92,6 @@
         $scope.cart.itemTotal--;
         $scope.cart.totalPrice = $scope.cart.totalPrice - item.price;
         $scope.products[id].inCart = false;
-        console.log($scope.cart.items);
-        console.log($scope.cart.totalPrice);
       }
     };
 

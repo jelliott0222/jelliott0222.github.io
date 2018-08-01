@@ -268,8 +268,9 @@ main {
     width: 100%;
     color: #333; }
   .shop .product-card {
-    flex: 1 0 20%;
-    max-width: 20%;
+    flex: 1 0 25%;
+    max-width: 200px;
+    height: 100%;
     padding: 1rem;
     margin: 1rem;
     color: #333;
@@ -277,7 +278,9 @@ main {
     border: 1px solid #ffb988;
     border-radius: 10px; }
     .shop .product-card img {
-      max-width: 100%; }
+      max-width: 100%;
+      width: 100%;
+      height: 100%; }
     .shop .product-card h3 {
       font-family: "Raleway"; }
     .shop .product-card h3,
