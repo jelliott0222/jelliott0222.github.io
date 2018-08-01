@@ -27,7 +27,13 @@
     $scope.$routeParams = $routeParams;
 
     $scope.products = [];
-    $scope.cartItems = [];
+    $scope.cart = {
+      itemTotal: 0,
+      items: [
+
+      ],
+      totalPrice: 0
+    };
 
     function initProducts() {
       $scope.products = [
@@ -73,27 +79,24 @@
 
     $scope.addCartItem = function(product) {
       if(!product.inCart) {
-        $scope.cartItems.push({name: product.name, quantity: 1, id: product.id, price: product.price, image: product.image});
+        $scope.cart.items.push({name: product.name, quantity: 1, id: product.id, price: product.price, image: product.image});
         product.inCart = !product.inCart;
-        console.log($scope.cartItems);
+        $scope.cart.itemTotal++;
+        $scope.cart.totalPrice = $scope.cart.totalPrice + product.price;
+        console.log($scope.cart.items);
+        console.log($scope.cart.totalPrice);
       }
     };
 
-    $scope.removeCartItem = function(item) {
+    $scope.removeCartItem = function(item, id) {
       if(item.quantity > 0) {
         item.quantity = 0;
-        console.log($scope.cartItems);
-        console.log($scope.cartItems.length);
+        $scope.cart.itemTotal--;
+        $scope.cart.totalPrice = $scope.cart.totalPrice - item.price;
+        $scope.products[id].inCart = false;
+        console.log($scope.cart.items);
+        console.log($scope.cart.totalPrice);
       }
-    };
-
-    $scope.cartSum = function() {
-      var sum = 0;
-      $scope.cartItems.forEach(function(item) {
-        sum += item.quantity * item.price;
-      });
-
-      return sum;
     };
 
     // $scope.$watch('products',function(){

@@ -1,18 +1,21 @@
 <div class='shop'>
   <h1>Current Cart</h1>
 
-  <div class="emptyMessage" ng-show='cartItems.length < 1'>
+  <div class="emptyMessage" ng-show='cart.itemTotal < 1'>
     <p>There are no items in your cart.</p>
     <a class='shop-btn' href='#/shop'>Continue shopping</a>
   </div>
-  <div class='cartItems' ng-show='cartItems.length > 0'>
+  <div class='cartItems' ng-show='cart.itemTotal > 0'>
     <table>
-      <tr ng-repeat="item in cartItems" ng-show='item.quantity > 0'>
-        <td><img src="resources/images/{{item.image}}" alt=""> {{item.name}}</td>
+      <tr ng-repeat="item in cart.items" ng-show='item.quantity > 0'>
+        <td><img src="resources/images/{{item.image}}" alt=""> <span>{{item.name}}</span></td>
         <td>{{item.price}}</td>
-        <td><a ng-click='removeCartItem(item)'><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+        <td><a ng-click='removeCartItem(item, item.id)' href=""><i class="fa fa-trash" aria-hidden="true"></i></a></td>
       </tr>
     </table>
+    <div class="cartTotal">
+      Total: {{cart.totalPrice | currency}}
+    </div>
     <a class='shop-btn checkout'>Continue to Checkout <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
   </div>
 </div>

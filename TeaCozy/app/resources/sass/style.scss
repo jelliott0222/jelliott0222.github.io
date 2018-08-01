@@ -371,6 +371,12 @@ main {
         font-size: 1.1rem;
         &:first-child {
           text-align: left;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          span {
+            display: inline-block;
+          }
         }
         img {
           max-width: 100px;
@@ -382,6 +388,11 @@ main {
         border: none;
       }
     }
+  }
+  .cartTotal {
+    font-size: 1.25rem;
+    color: $dark-color;
+    padding: 1rem;
   }
   .fa-trash {
     color: red;
