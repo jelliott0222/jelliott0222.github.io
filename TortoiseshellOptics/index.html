@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='tortoiseshellOptics'>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script type="text/javascript" src='resources/js/mobilemenu.js'></script>
   </head>
-  <body>
+  <body ng-cloak ng-controller='MainController'>
     <header>
       <div class="header-container">
         <div class="logo-nav-bar container flex">
@@ -23,52 +23,41 @@
           <nav class='flex abs-ctr'>
             <span class='mobile-only toggle-menu'><a href="#">Menu</a></span>
             <ul class="non-mobile">
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Contacts</a></li>
+              <li><a href="#/services">Services</a></li>
+              <li><a href="#/products">Products</a></li>
+              <li><a href="#/contact">Contact</a></li>
             </ul>
           </nav>
         </div>
       </div>
-      <div class="container flex justify-end">
-        <div class="headline">
+      <div class="headline flex abs-ctr">
+        <div class="container">
           Don't just look, see.
         </div>
       </div>
     </header>
-    <main>
-      <div class="icon-row flex abs-ctr container">
-        <div class="icon-container">
-          <img src="resources/images/paper-icon.png" alt="Paper Icon">
-          <div>Comprehensive Exams</div>
-        </div>
-        <div class="icon-container">
-          <img src="resources/images/ruler-icon.png" alt="Ruler Icon">
-          <div>Custom Fittings</div>
-        </div>
-        <div class="icon-container">
-          <img src="resources/images/truck-icon.png" alt="Truck Icon">
-          <div>Fast Delivery</div>
-        </div>
-      </div>
-      <div class="info-row flex around container">
-        <div class="info-container">
-          <h3>Philosophy</h3>
-          <p>Over 75% of our brains are dedicated to one sense: vision. We believe everyone deserves to see the world, not matter what. That’s why we offer eye exams, custom fittings, and quick delivery at a low cost. It’s your vision that makes ours.</p>
-        </div>
-        <div class="info-container">
-          <h3>Appointments</h3>
-          <p>Schedule an appointment by calling us at (888) 555-1234. We’re open Tuesday - Saturday, 9:00 a.m. - 6:00 p.m..</p>
-        </div>
-      </div>
-    </main>
+    <div ng-view></div>
     <footer>
       <div class="container flex">
-        <img src="resources/images/logo-black.png" alt="Company Logo">
         <div class="copyright">
-          &copy; 2017 Tortoiseshell Optics
+          &copy; 2018 Tortoiseshell Optics
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fa fa-2x fa-facebook-official" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-2x fa-twitter-square" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-2x fa-instagram" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-2x fa-snapchat-square" aria-hidden="true"></i></a>
         </div>
       </div>
     </footer>
+
+    <!-- Vendors -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js" charset="utf-8"></script>
+    <script src="https://code.angularjs.org/1.7.2/angular-route.js" charset="utf-8"></script>
+
+    <!-- Application Files -->
+    <script src="resources/js/app.js" charset="utf-8"></script>
+    <script src="controllers/MainController.js" charset="utf-8"></script>
+
   </body>
 </html>

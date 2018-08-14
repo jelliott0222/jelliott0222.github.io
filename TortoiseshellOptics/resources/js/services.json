@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Comprehensive Exams",
+    "imageUrl": "resources/images/exams.jpg",
+    "description": "DESCRIPTION"
+  },
+  {
+    "name": "Custom Fittings",
+    "imageUrl": "resources/images/fittings.jpeg",
+    "description": "DESCRIPTION"
+  },
+  {
+    "name": "Fast Delivery",
+    "imageUrl": "resources/images/delivery.jpeg",
+    "description": "DESCRIPTION"
+  }
+]
