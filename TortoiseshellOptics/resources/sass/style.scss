@@ -31,7 +31,7 @@ p {
 }
 
 .container {
-  width: 1150px;
+  max-width: 1150px;
   margin: 0px auto;
 }
 
@@ -81,7 +81,6 @@ header {
       }
 
       nav {
-        position: relative;
 
         ul {
           list-style: none;
@@ -150,11 +149,12 @@ header {
 .icon-row {
   padding: 2rem 0;
   justify-content: space-around;
+  flex-wrap: wrap;
 
   .icon-container {
     // width: 100%;
     // max-width: 300px;
-    margin: 0.77rem 0;
+    margin: 0.77rem 0.5rem;
     position: relative;
     overflow: hidden;
 
@@ -194,29 +194,47 @@ header {
   flex-direction: column;
 
   .info-container {
-    padding: 2rem 1rem;
     background-color: $clr-primary;
     color: white;
     flex: 1 0;
+    flex-wrap: wrap;
 
     &:nth-child(2n) {
       background-color: white;
       color: $clr-primary;
+
+      img {
+        order: 2;
+      }
     }
 
-    h3 {
-      font-weight: bold;
-      font-size: 2.5rem;
-      text-transform: uppercase;
-      color: $clr-primary-dark;
-      width: 100%;
-      padding: 0.5rem 1.25rem;
+    img {
+      flex: 1 0 50%;
     }
 
-    p {
-      padding: 0.5rem 1.25rem;
-      margin: 1rem 0;
-      line-height: 1.5rem;
+    &-details {
+      padding: 2rem 1rem;
+      flex: 1 0 50%;
+
+      h3 {
+        font-weight: bold;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: $clr-primary-dark;
+        width: 100%;
+        padding: 0.5rem 1.25rem;
+      }
+
+      p {
+        padding: 0.5rem 1.25rem;
+        margin: 1rem 0;
+        line-height: 1.5rem;
+      }
+
+      .appt-option {
+        display: block;
+        padding: 0.5rem 1.25rem;
+      }
     }
   }
 }
@@ -227,12 +245,34 @@ header {
 
 footer {
   background-color: $clr-primary;
+  color: $clr-primary-dark;
+  padding: 4rem 3rem;
 
   .container.flex {
-    color: $clr-primary-dark;
-    padding: 4rem 3rem;
+    padding: 1rem 0;
     justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+
+    &.abs-ctr {
+      justify-content: center;
+    }
+
+    &:first-child > div {
+      flex: 1 0 300px;
+      padding: 1rem 0 0;
+    }
+
+    .footer-links {
+      a {
+        padding: 0 0.5rem;
+        text-decoration: none;
+        color: $clr-primary-dark;
+
+        &:hover {
+          color: $clr-primary-light;
+        }
+      }
+    }
 
     .social-icons {
 
@@ -267,6 +307,21 @@ footer {
       margin-top: 5rem;
     }
   }
+
+  .info-row .info-container {
+    &:nth-child(2) {
+      img {
+        order: 1;
+      }
+      .info-container-details {
+        order: 2;
+      }
+    }
+    img,
+    &-details {
+      flex: 1 0 100%;
+    }
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -274,23 +329,24 @@ footer {
     display: flex;
   }
 
-  .logo-nav-bar ul {
+  header .header-container .logo-nav-bar nav ul {
     display: none;
     position: absolute;
     top: 100%;
-    background-color: #333;
-    border: 2px solid #333;
-    &::before {
-      content: "";
-      border: 5px solid #333;
-      position: absolute;
-      left: 50%;
-      top: -12px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: transparent transparent #333 transparent;
-      padding: 0;
-    }
+    right: 0px;
+    width: 100%;
+    background-color: $clr-primary;
+    // &::before {
+    //   content: "";
+    //   border: 5px solid #333;
+    //   position: absolute;
+    //   left: 50%;
+    //   top: -12px;
+    //   border-width: 5px;
+    //   border-style: solid;
+    //   border-color: transparent transparent #333 transparent;
+    //   padding: 0;
+    // }
 
     &.active {
       display: block;
@@ -298,9 +354,10 @@ footer {
 
     li a {
      border-bottom: none;
+     border-top: 1px solid $clr-primary-light;
      &:hover {
-       background-color: $clr-primary;
-       border-bottom: none;
+       background-color: $clr-primary-dark;
+       color: $clr-primary-light;
      }
     }
   }
