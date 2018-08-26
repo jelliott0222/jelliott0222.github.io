@@ -180,6 +180,7 @@ header {
       background-color: rgba($clr-primary,0.5);
       color: white;
       font-size: 1.5rem;
+      line-height: 1.5;
 
       position: absolute;
       width: 100%;
@@ -238,6 +239,7 @@ header {
     .appt-option {
       display: block;
       padding: 0.5rem 1.25rem;
+      line-height: 1.5;
     }
   }
 }
@@ -250,9 +252,11 @@ header {
     text-align: center;
     font-size: 1.5rem;
     color: $clr-primary-dark;
+    padding: 0 0 1rem;
   }
   .contact-form {
     width: 100%;
+    max-width: 960px;
 
     label,
     input,
@@ -466,7 +470,7 @@ footer {
     flex-direction: column;
     padding-bottom: 0;
 
-    .info-container {
+    .info-container-details {
       width: 100%;
       margin: 0;
 
@@ -484,6 +488,7 @@ footer {
   footer {
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 
     .container.flex:first-child > div {
       flex: 1 0 100%;
@@ -494,7 +499,8 @@ footer {
     }
 
     .copyright {
-      display: none;
+      text-align: center;
+      line-height: 1.5;
     }
   }
 }
