@@ -117,37 +117,74 @@ header {
       height: 100%; }
 
 .info-row {
-  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%; }
+  .info-row .item1 {
+    grid-area: 1/1/2/3; }
+  .info-row .item2 {
+    grid-area: 1/1/2/2; }
+  .info-row .item3 {
+    grid-area: 2/1/3/3; }
+  .info-row .item4 {
+    grid-area: 2/2/3/3; }
+  .info-row img {
+    width: 100%; }
+  .info-row .info-container-details {
+    padding: 2rem 1rem;
+    background-color: rgba(95, 158, 160, 0.8);
+    color: white; }
+    .info-row .info-container-details h3 {
+      font-weight: bold;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: #395f60;
+      width: 100%;
+      padding: 0.5rem 1.25rem; }
+    .info-row .info-container-details p {
+      padding: 0.5rem 1.25rem;
+      line-height: 1.5rem;
+      font-size: 1.2rem; }
+    .info-row .info-container-details .appt-option {
+      display: block;
+      padding: 0.5rem 1.25rem; }
+
+.contact-row {
+  padding: 2rem 1rem;
   flex-direction: column; }
-  .info-row .info-container {
-    background-color: #5F9EA0;
-    color: white;
-    flex: 1 0;
-    flex-wrap: wrap; }
-    .info-row .info-container:nth-child(2n) {
-      background-color: white;
+  .contact-row h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #395f60; }
+  .contact-row .contact-form {
+    width: 100%; }
+    .contact-row .contact-form label,
+    .contact-row .contact-form input,
+    .contact-row .contact-form textarea {
+      display: block;
+      width: 100%;
+      padding: 0.5rem 0.5rem 0.25rem;
+      font-size: 1rem;
+      font-family: "Montserrat"; }
+    .contact-row .contact-form label {
       color: #5F9EA0; }
-      .info-row .info-container:nth-child(2n) img {
-        order: 2; }
-    .info-row .info-container img {
-      flex: 1 0 50%; }
-    .info-row .info-container-details {
-      padding: 2rem 1rem;
-      flex: 1 0 50%; }
-      .info-row .info-container-details h3 {
-        font-weight: bold;
-        font-size: 2.5rem;
-        text-transform: uppercase;
-        color: #395f60;
-        width: 100%;
-        padding: 0.5rem 1.25rem; }
-      .info-row .info-container-details p {
-        padding: 0.5rem 1.25rem;
-        margin: 1rem 0;
-        line-height: 1.5rem; }
-      .info-row .info-container-details .appt-option {
-        display: block;
-        padding: 0.5rem 1.25rem; }
+    .contact-row .contact-form input,
+    .contact-row .contact-form textarea {
+      border: none;
+      border-bottom: 1px solid #ccc; }
+    .contact-row .contact-form button {
+      margin: 1rem auto;
+      padding: 0.5rem;
+      font-size: 1rem;
+      font-family: "Comfortaa";
+      background-color: #5F9EA0;
+      color: white;
+      border: 2px solid #5F9EA0;
+      transition: all 0.5s ease;
+      cursor: pointer; }
+      .contact-row .contact-form button:hover {
+        color: #5F9EA0;
+        background-color: white; }
 
 footer {
   background-color: #5F9EA0;
@@ -175,6 +212,13 @@ footer {
       footer .container.flex .social-icons a:hover {
         color: #dfecec; }
 
+@media only screen and (max-width: 1260px) {
+  .info-row .info-container-details {
+    padding: 1rem; }
+    .info-row .info-container-details h3 {
+      font-size: 2rem; }
+    .info-row .info-container-details p {
+      font-size: 1rem; } }
 @media only screen and (max-width: 1024px) {
   .container {
     width: 100%; }
@@ -188,12 +232,19 @@ footer {
       margin-right: 2rem;
       margin-top: 5rem; }
 
-  .info-row .info-container:nth-child(2) img {
-    order: 1; }
-  .info-row .info-container:nth-child(2) .info-container-details {
-    order: 2; }
-  .info-row .info-container img, .info-row .info-container-details {
-    flex: 1 0 100%; } }
+  .info-row {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 25%); }
+    .info-row .item1 {
+      grid-area: 1/1/2/2; }
+    .info-row .item2 {
+      grid-area: 2/1/3/2; }
+    .info-row .item3 {
+      grid-area: 3/1/4/2; }
+    .info-row .item4 {
+      grid-area: 4/1/5/2; }
+    .info-row .info-container-details {
+      background-color: #5F9EA0; } }
 @media only screen and (max-width: 700px) {
   .mobile-only {
     display: flex; }

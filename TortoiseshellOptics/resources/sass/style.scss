@@ -189,50 +189,105 @@ header {
 }
 
 .info-row {
-  padding-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+
+  .item1 {
+    grid-area: 1/1/2/3;
+  }
+  .item2 {
+    grid-area: 1/1/2/2;
+  }
+  .item3 {
+    grid-area: 2/1/3/3;
+  }
+  .item4 {
+    grid-area: 2/2/3/3;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .info-container-details {
+    padding: 2rem 1rem;
+    background-color: rgba($clr-primary,0.8);
+    color: white;
+
+    // &:nth-child(n+3) {
+    //   background-color: rgba(white,0.5);
+    //   color: $clr-primary;
+    // }
+
+    h3 {
+      font-weight: bold;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: $clr-primary-dark;
+      width: 100%;
+      padding: 0.5rem 1.25rem;
+    }
+
+    p {
+      padding: 0.5rem 1.25rem;
+      line-height: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    .appt-option {
+      display: block;
+      padding: 0.5rem 1.25rem;
+    }
+  }
+}
+
+.contact-row {
+  padding: 2rem 1rem;
   flex-direction: column;
 
-  .info-container {
-    background-color: $clr-primary;
-    color: white;
-    flex: 1 0;
-    flex-wrap: wrap;
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: $clr-primary-dark;
+  }
+  .contact-form {
+    width: 100%;
 
-    &:nth-child(2n) {
-      background-color: white;
+    label,
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 0.5rem 0.5rem 0.25rem;
+      font-size: 1rem;
+      font-family: $font-secondary;
+    }
+
+    label {
       color: $clr-primary;
-
-      img {
-        order: 2;
-      }
     }
 
-    img {
-      flex: 1 0 50%;
+    input,
+    textarea {
+      border: none;
+      border-bottom: 1px solid #ccc;
     }
 
-    &-details {
-      padding: 2rem 1rem;
-      flex: 1 0 50%;
+    button {
+      margin: 1rem auto;
+      padding: 0.5rem;
+      font-size: 1rem;
+      font-family: $font-primary;
+      background-color: $clr-primary;
+      color: white;
+      border: 2px solid $clr-primary;
+      transition: all 0.5s ease;
+      cursor: pointer;
 
-      h3 {
-        font-weight: bold;
-        font-size: 2.5rem;
-        text-transform: uppercase;
-        color: $clr-primary-dark;
-        width: 100%;
-        padding: 0.5rem 1.25rem;
-      }
-
-      p {
-        padding: 0.5rem 1.25rem;
-        margin: 1rem 0;
-        line-height: 1.5rem;
-      }
-
-      .appt-option {
-        display: block;
-        padding: 0.5rem 1.25rem;
+      &:hover {
+        color: $clr-primary;
+        background-color: white;
       }
     }
   }
@@ -291,6 +346,19 @@ footer {
 
 // Media Queries
 
+@media only screen and (max-width: 1260px) {
+  .info-row .info-container-details {
+    padding: 1rem;
+
+    h3 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .container {
     width: 100%;
@@ -308,18 +376,24 @@ footer {
     }
   }
 
-  .info-row .info-container {
-    &:nth-child(2) {
-      img {
-        order: 1;
-      }
-      .info-container-details {
-        order: 2;
-      }
+  .info-row {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 25%);
+    .item1 {
+      grid-area: 1/1/2/2;
     }
-    img,
-    &-details {
-      flex: 1 0 100%;
+    .item2 {
+      grid-area: 2/1/3/2;
+    }
+    .item3 {
+      grid-area: 3/1/4/2;
+    }
+    .item4 {
+      grid-area: 4/1/5/2;
+    }
+
+    .info-container-details {
+      background-color: $clr-primary;
     }
   }
 }

@@ -5,24 +5,32 @@
       <div class="flex abs-ctr">{{service.name}}</div>
     </div>
   </div>
-  <div class="info-row flex around">
-    <div class="info-container flex">
-      <img src="resources/images/philosophy.png" alt="Our Philosophy">
-      <div class="info-container-details">
-        <h3>Philosophy</h3>
-        <p>Over 75% of our brains are dedicated to one sense: vision. We believe everyone deserves to see the world, not matter what. That’s why we offer eye exams, custom fittings, and quick delivery at a low cost. It’s your vision that makes ours.</p>
-      </div>
+  <div class="info-row">
+    <img class="item1" src="resources/images/philosophy.png" alt="Our Philosophy">
+    <div class="info-container-details item2">
+      <h3>Philosophy</h3>
+      <p>Over 75% of our brains are dedicated to one sense: vision. We believe everyone deserves to see the world, not matter what. That’s why we offer eye exams, custom fittings, and quick delivery at a low cost. It’s your vision that makes ours.</p>
     </div>
-    <div class="info-container flex">
-      <img src="resources/images/appointments.png" alt="Appointments Image">
-      <div class="info-container-details">
-        <h3>Appointments</h3>
-        <p>Schedule an appointment today:</p>
-        <span class='appt-option'><i class="fa fa-mobile" aria-hidden="true"></i> (888) 555-1234</span>
-        <span class='appt-option'><i class="fa fa-map-marker" aria-hidden="true"></i> 123 S Main St
-          Opti, CA 92895</span>
-        <span class='appt-option'><i class="fa fa-clock-o" aria-hidden="true"></i> Tuesday - Saturday, 9:00 a.m. - 6:00 p.m.</span>
-      </div>
+    <img class="item3" src="resources/images/appts.png" alt="Appointments Image">
+    <div class="info-container-details item4">
+      <h3>Appointments</h3>
+      <p>Schedule an appointment today:</p>
+      <span class='appt-option'><i class="fa fa-mobile" aria-hidden="true"></i> (888) 555-1234</span>
+      <span class='appt-option'><i class="fa fa-map-marker" aria-hidden="true"></i> 123 S Main St
+        Opti, CA 92895</span>
+      <span class='appt-option'><i class="fa fa-clock-o" aria-hidden="true"></i> Tuesday - Saturday, 9:00 a.m. - 6:00 p.m.</span>
     </div>
+  </div>
+  <div class="contact-row flex abs-ctr">
+    <h3>Have any questions or feedback?</h3>
+    <form class="contact-form" action="index.html" method="post">
+      <label for="name">Name</label>
+      <input type="text" name="name" value="">
+      <label for="email">Email Address</label>
+      <input type="text" name="email" value="">
+      <label for="feedback">Question/Comment</label>
+      <textarea name="feedback" rows="8" cols="80"></textarea>
+      <button type="submit" name="button">Send</button>
+    </form>
   </div>
 </main>
