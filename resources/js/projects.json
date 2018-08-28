@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Broadway Design",
+    "url": "projects/broadway/index.html",
+    "description": "DESCRIPTION",
+    "imageUrl": "../images/IMAGE.png"
+  },
+  {
+    "name": "Colmar Academy",
+    "url": "projects/colmar/index.html",
+    "description": "DESCRIPTION",
+    "imageUrl": "../images/IMAGE.png"
+  },
+  {
+    "name": "Fotomatic",
+    "url": "projects/fotomatic/index.html",
+    "description": "DESCRIPTION",
+    "imageUrl": "../images/IMAGE.png"
+  },
+  {
+    "name": "Secret Agent Supply",
+    "url": "projects/SecretAgentSupply/index.html",
+    "description": "DESCRIPTION",
+    "imageUrl": "../images/IMAGE.png"
+  },
+  {
+    "name": "TeaCozy",
+    "url": "projects/TeaCozy/app/index.html",
+    "description": "DESCRIPTION",
+    "imageUrl": "../images/IMAGE.png"
+  },
+  {
+    "name": "Tortoiseshell Optics",
+    "url": "projects/TortoiseshellOptics/index.html",
+    "description": "DESCRIPTION",
+    "imageUrl": "../images/IMAGE.png"
+  }
+]

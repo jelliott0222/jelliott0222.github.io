@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="portfolio">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -8,72 +8,47 @@
     <link rel="stylesheet" href="resources/css/reset.css">
     <link rel="stylesheet" href="resources/css/style.css">
   </head>
-  <body>
+  <body class='grid-container' ng-controller="MainController">
     <header>
-      <h1>Hi, I'm Jon. I'm a web developer.</h1>
+      <div class="background">
+
+      </div>
+      <nav>
+        <a>About</a>
+        <a>Work</a>
+        <a>Resume</a>
+        <a>Contact</a>
+      </nav>
+      <div class="hero">
+        <h1>Hi, I'm Jon.</h1>
+        <h3>I'm a web developer.</h3>
+      </div>
     </header>
-    <section>
-      <h2>Who I Am</h2>
-    </section>
-    <section>
-      <h2>What I've Done</h2>
-        <a href='projects/broadway/index.html' target="_blank">Broadway Design</a>
-        <div>Languages and Frameworks Used
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SASS</li>
-            <li>jQuery</li>
-          </ul>
-        </div>
-        <a href='projects/colmar/index.html' target="_blank">Colmar Academy</a>
-        <div>Languages and Frameworks Used
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </div>
-        <a href='projects/fotomatic/index.html' target="_blank">Fotomatic</a>
-        <div>Languages and Frameworks Used
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SASS</li>
-          </ul>
-        </div>
-        <a href='projects/SecretAgentSupply/index.html' target="_blank">Secret Agent Supply</a>
-        <div>Languages and Frameworks Used
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SASS</li>
-            <li>jQuery</li>
-          </ul>
-        </div>
-        <a href='projects/TeaCozy/app/index.html' target="_blank">Tea Cozy</a>
-        <div>Languages and Frameworks Used
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SASS</li>
-            <li>jQuery</li>
-            <li>AngularJS</li>
-          </ul>
-        </div>
-        <a href='projects/TortoiseshellOptics/index.html' target="_blank">Tortoiseshell Optics</a>
-        <div>Languages and Frameworks Used
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </div>
-    </section>
-    <section>
-      <h2>Resume</h2>
-    </section>
-    <section>
-      <h2>How to Contact</h2>
-    </section>
+
+    <main>
+      <section>
+        <h2>Who I Am</h2>
+      </section>
+      <section>
+        <h2>What I've Done</h2>
+          <div class="projectContainer" ng-repeat='project in projects'>
+            <div class="projectImage">
+              <a href="{{project.url}}"><img src="{{project.imageUrl}}" alt="{{project.name}} Site"></a>
+            </div>
+            <div class="projectDetails">
+              <a href='{{project.url}}' target="_blank">{{project.name}}</a>
+              <p>{{project.description}}</p>
+            </div>
+          </div>
+      </section>
+      <section>
+        <h2>Resume</h2>
+      </section>
+      <section>
+        <h2>How to Contact</h2>
+      </section>
+    </main>
+
     <footer></footer>
 
     <!-- Vendors -->

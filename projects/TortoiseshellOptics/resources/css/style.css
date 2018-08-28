@@ -27,7 +27,7 @@ p {
   justify-content: flex-end; }
 
 header {
-  background-image: url(https://jelliott0222.github.io/TortoiseshellOptics/resources/images/glasses-bg.png);
+  background-image: url("../images/glasses-bg.png");
   background-size: cover;
   background-position: 20%;
   height: 30rem;
