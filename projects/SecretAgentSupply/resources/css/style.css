@@ -55,7 +55,7 @@ header {
             background-color: firebrick;
             color: white; }
   header .main-image {
-    background-image: url(https://jelliott0222.github.io/SecretAgentSupply/resources/images/moto.jpeg);
+    background-image: url("../images/moto.jpeg");
     background-size: cover;
     height: 25rem;
     display: flex;
