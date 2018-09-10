@@ -3,36 +3,36 @@
     "name": "Broadway Design",
     "url": "projects/broadway/index.html",
     "description": "DESCRIPTION",
-    "imageUrl": "../images/IMAGE.png"
+    "imageUrl": "resources/images/the-flatiron-building.jpg"
   },
   {
     "name": "Colmar Academy",
     "url": "projects/colmar/index.html",
     "description": "DESCRIPTION",
-    "imageUrl": "../images/IMAGE.png"
+    "imageUrl": "resources/images/banner.jpg"
   },
   {
     "name": "Fotomatic",
     "url": "projects/fotomatic/index.html",
     "description": "DESCRIPTION",
-    "imageUrl": "../images/IMAGE.png"
+    "imageUrl": "resources/images/feature-1.png"
   },
   {
     "name": "Secret Agent Supply",
     "url": "projects/SecretAgentSupply/index.html",
     "description": "DESCRIPTION",
-    "imageUrl": "../images/IMAGE.png"
+    "imageUrl": "resources/images/motorcycle-gear.jpeg"
   },
   {
     "name": "TeaCozy",
     "url": "projects/TeaCozy/app/index.html",
     "description": "DESCRIPTION",
-    "imageUrl": "../images/IMAGE.png"
+    "imageUrl": "resources/images/img-berryblitz.jpg"
   },
   {
     "name": "Tortoiseshell Optics",
     "url": "projects/TortoiseshellOptics/index.html",
     "description": "DESCRIPTION",
-    "imageUrl": "../images/IMAGE.png"
+    "imageUrl": "resources/images/glasses-bg.jpg"
   }
 ]

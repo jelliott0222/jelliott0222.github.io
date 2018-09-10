@@ -1,3 +1,7 @@
+// Imports
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Montserrat:100|Quicksand:300|Roboto+Slab:100|Work+Sans:300');
+
+
 /* Color Codes
 
 Purple #1d1160, rgb(29,17,96)
@@ -11,6 +15,10 @@ Gray #a1a1a4, rgb(161,161,164)
 
 $clr-primary: #008ca8;
 $white: #fff;
+
+$font-primary: 'Montserrat';
+$font-secondary: 'Roboto Slab';
+$font-text: 'Quicksand';
 
 
 
@@ -27,31 +35,54 @@ html {
 body {
   background-color: $white;
   color: $clr-primary;
-  font-family: Helvetica;
+}
+
+p,
+li,
+span {
+  font-family: $font-text;
+}
+
+h1,
+h2,
+h4,
+a {
+  font-family: $font-primary;
+}
+
+h3,
+h5 {
+  font-family: $font-secondary;
 }
 
 a {
   color: $clr-primary;
-  font-family: Verdana;
   font-size: 1.5rem;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 6rem;
   color: $white;
 }
 
 h2 {
-  font-size: 3rem;
-  color: #1D1160;
+  text-align: left;
+  text-transform: uppercase;
+  padding: 2rem 1rem;
+  font-size: 5rem;
+  color: #bbb;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 3rem;
 }
 
 header {
@@ -59,7 +90,7 @@ header {
 
   .background {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     z-index: -1;
     position: absolute;
     display: flex;
@@ -82,6 +113,16 @@ header {
 
     a {
       padding: 1rem;
+      text-decoration: none;
+      font-size: 2rem;
+      color: #333;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: white;
+        border-bottom: 2px solid $clr-primary;
+      }
     }
   }
 
@@ -98,24 +139,285 @@ header {
   }
 }
 
-section {
-  padding: 5rem 1rem;
-  text-align: center;
+main {
 
-  a {
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    text-decoration: none;
-    &:hover {
-      background-color: #1d1160;
-      color: $white;
+  section {
+    padding: 5rem 1rem;
+    text-align: center;
+    margin: 0 auto;
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
     }
-    &:nth-child(odd) {
-      background-color: #A1A1A4;
+
+    &#About {
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+
+        h2 {
+          flex: 1 0 100%;
+        }
+
+        div {
+          flex: 1 0 50%;
+          padding: 2rem 0;
+          text-align: left;
+
+          p,
+          li {
+            color: #333;
+            font-size: 2rem;
+            line-height: 1.5;
+          }
+        }
+      }
     }
-    :nth-child(even) {
-      background-color: $white;
+
+    // Work Section
+    &#Work {
+      background-color: $clr-primary;
+
+      h2 {
+        color: white;
+      }
+    }
+    .projectContainer {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+
+      & > div {
+        flex: 1 0 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      &:nth-child(odd) {
+        .projectImage {
+          order: 2;
+        }
+        .projectDetails {
+          order: 1;
+        }
+      }
+
+      .projectImage {
+
+        a {
+          width: 100%;
+          height: 100%;
+
+        }
+
+        img {
+          width: 100%;
+          display: block;
+          filter: grayscale(100%);
+          transition: all 0.4s ease-in;
+        }
+      }
+
+      &:hover {
+
+        .projectImage img {
+          filter: grayscale(0%);
+        }
+
+        .projectDetails {
+          background-color: white;
+        }
+      }
+
+      .projectDetails {
+
+        transition: all 0.4s ease-in;
+
+        a {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          padding: 1rem;
+          text-decoration: none;
+          font-size: 5rem;
+          color: white;
+          transition: all 0.4s ease-in;
+        }
+      }
+
+      &:hover .projectDetails a {
+        color: $clr-primary;
+      }
+    }
+
+    // Resume Section
+
+    &#Resume {
+
+      background-color: #eee;
+      color: #333;
+      text-align: left;
+
+      h3 {
+        padding: 2rem;
+        color: $clr-primary;
+      }
+
+      h4 {
+        font-size: 3rem;
+        padding: 1rem 0;
+      }
+
+      hr {
+        opacity: 0.2;
+      }
+
+      span,
+      li,
+      p {
+        font-size: 2rem;
+        line-height: 1.5;
+      }
+
+      span {
+        padding: 1.5rem;
+        display: inline-block;
+      }
+
+      .flex {
+        display: flex;
+        padding: 1.5rem 0;
+
+        .resume_left {
+          flex: 1 0 40%;
+        }
+
+        .resume_right {
+          flex: 1 0 60%;
+        }
+
+        .resume_half {
+          flex: 1 0 50%;
+          text-align: center;
+          &:first-child {
+            border-right: 1px solid rgba(51,51,51,0.2);
+          }
+        }
+      }
+
+      .education {
+        padding: 0 2rem;
+
+        .resume_right {
+
+          span,
+          a {
+            line-height: 1.5;
+            color: $clr-primary;
+            text-decoration: none;
+
+            i {
+              color: #333;
+            }
+          }
+        }
+      }
+
+      .experience {
+        padding: 0 2rem;
+
+        .title {
+
+        }
+        .company {
+
+        }
+        .timeframe {
+
+        }
+        .jobDescription {
+
+        }
+      }
+    }
+
+    // Contact Section
+
+    &#Contact {
+      background-color: $clr-primary;
+
+      h2 {
+        color: white;
+      }
+
+      p,
+      a,
+      span.contactOpt,
+      input[type="text"] {
+        font-size: 2.5rem;
+        line-height: 1.5;
+      }
+
+      p {
+        color: darken($clr-primary, 20%);
+      }
+
+      span.contactOpt {
+        color: white;
+
+        i {
+          color: lighten($clr-primary, 20%);
+        }
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+
+      form {
+        margin: 0 auto;
+        padding: 0 2rem;
+
+        input[type="submit"] {
+        	display: block;
+          color: darken($clr-primary, 20%);
+          background-color: lighten($clr-primary, 60%);
+          border: 2px solid lighten($clr-primary, 60%);
+          border-radius: 15px;
+          box-shadow: 1px 1px 2px #333;
+          padding: 1rem 3rem;
+          margin: 4rem auto;
+          font-size: 2rem;
+          font-family: $font-text;
+          cursor: pointer;
+          transition: all 0.5s ease;
+
+          &:hover {
+            background-color: lighten($clr-primary, 50%);
+            border: 2px solid lighten($clr-primary, 50%);
+
+          }
+        }
+
+        input[type="text"] {
+        	border: none;
+          border-bottom: 2px dotted lighten($clr-primary, 20%);
+          color: white;
+          background-color: $clr-primary;
+          font-family: $font-primary;
+        }
+      }
     }
   }
 }

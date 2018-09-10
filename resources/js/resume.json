@@ -1,0 +1,73 @@
+{
+  "experiences": [
+    {
+      "title": "Knowledge Systems Administrator",
+      "company": "Fiserv",
+      "timeframe": "July 2014 to Present",
+      "description": [
+        "Redesigned outdated internal directory website to be fully responsive using HTML, CSS, and jQuery using a custom CSS layout.",
+        "Redesigned and develop three major internal applications using HTML, CSS, Flexbox, jQuery, and JavaScript.",
+        "Played a principle role in upgrade of content management system for existing knowledge base website and migrated over 2000 knowledge base articles to new system. Provided input with team on decisions of customizing UI and UX elements of new site."
+      ]
+    },
+    {
+      "title": "Team Leader",
+      "company": "Fiserv",
+      "timeframe": "June 2010 to June 2014",
+      "description": [
+        "Resolved intricate customer inquiries and escalated matters to improve quality of service and customer satisfaction.",
+        "Conducted side-by-side coaching to improve associate skill set, average handle time, quality, and associate adherence.",
+        "Created, reviewed, and updated internal procedures to enhance call quality and customer experience."
+      ]
+    }
+  ],
+  "educations": [
+    {
+      "institution": "PluralSight",
+      "name": "Various Courses and Paths",
+      "timeframe": "August 2015 - Ongoing",
+      "description": "I have completed interactive courses in HTML5, CSS3, Flexbox, Git, JavaScript, jQuery, AngularJS, and other HTML and JavaScript lessons. I am focusing on honing my AngularJS development knowledge currently. I plan to continue learning in PluralSight for many years to come.",
+      "online": true,
+      "location": "https://www.pluralsight.com"
+    },
+    {
+      "institution": "Codecademy",
+      "name": "Freelance Web Design Course",
+      "timeframe": "February 2017 - April 2017",
+      "description": "I participated in an eight-week course designed to teach users to design, build and deploy professional websites from scratch using HTML, CSS, JavaScript, and Github. The course helped me solidify an overall front-end skill set, particularly in regards to Flexbox and Github.",
+      "online": true,
+      "location": "https://www.codeschool.com"
+    },
+    {
+      "institution": "Catawba Valley Community College",
+      "name": "Associates in Web Technologies",
+      "timeframe": "August 2013 - May 2015",
+      "description": "The degree program focused mainly on front-end development during college, with some classes in backend and full-stack development such as Mobile Java development, C++ development, and database fundamentals. I built websites mostly using Dreamweaver and Notepad++ during these courses.",
+      "online": false,
+      "location": "Hickory, NC"
+    }
+  ],
+  "skills": [
+    "Responsive Web Design",
+    "Project Management",
+    "Strong Design Sense",
+    "Content Management",
+    "Excellent Communication",
+    "Project Collaboration",
+    "Detail-Oriented",
+    "Rapid Development"
+  ],
+  "languages": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "Bootstrap",
+    "Sass/SCSS",
+    "jQuery",
+    "AngularJS",
+    "Angular",
+    "ReactJS",
+    "Ember",
+    "Git"
+  ]
+}

@@ -7,49 +7,143 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700|Rubik" rel="stylesheet">
     <link rel="stylesheet" href="resources/css/reset.css">
     <link rel="stylesheet" href="resources/css/style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
-  <body class='grid-container' ng-controller="MainController">
+  <body class='grid-container' ng-controller="MainController" ng-cloak>
     <header>
       <div class="background">
 
       </div>
       <nav>
-        <a>About</a>
-        <a>Work</a>
-        <a>Resume</a>
-        <a>Contact</a>
+        <a href='#About'>About</a>
+        <a href='#Work'>Work</a>
+        <a href='#Resume'>Resume</a>
+        <a href='#Contact'>Contact</a>
       </nav>
       <div class="hero">
         <h1>Hi, I'm Jon.</h1>
-        <h3>I'm a web developer.</h3>
+        <h5>I'm a web developer.</h5>
       </div>
     </header>
 
     <main>
-      <section>
-        <h2>Who I Am</h2>
+      <section id="About">
+        <div class="container">
+          <h2>About</h2>
+          <div class="details">
+            <ul>
+              <li>Name: Jon Elliott</li>
+              <li>Age: 30</li>
+              <li>Location: Hickory, NC, USA</li>
+            </ul>
+            <p>Other personal notes:
+              <ul>
+                <li>Funniest person I've ever met.</li>
+                <li>Career .025 batting average in Little League.</li>
+                <li></li>
+              </ul>
+            </p>
+          </div>
+          <div class="summary">
+            <p>I am an aspiring web developer with a focus on front-end technologies. My design process centers around responsiveness and a modern look and feel. I am constantly looking for inspiration and ideas from anywhere and everywhere on the Internet.</p>
+          </div>
+        </div>
       </section>
-      <section>
-        <h2>What I've Done</h2>
+      <section id="Work">
+        <div class="container">
+          <h2>Work</h2>
           <div class="projectContainer" ng-repeat='project in projects'>
             <div class="projectImage">
               <a href="{{project.url}}"><img src="{{project.imageUrl}}" alt="{{project.name}} Site"></a>
             </div>
             <div class="projectDetails">
               <a href='{{project.url}}' target="_blank">{{project.name}}</a>
-              <p>{{project.description}}</p>
+              <!-- <p>{{project.description}}</p> -->
             </div>
           </div>
+        </div>
       </section>
-      <section>
-        <h2>Resume</h2>
+      <section id="Resume">
+        <div class="container">
+          <h2>Resume</h2>
+          <h3>Experience</h3>
+          <div class="flex experience" ng-repeat="exp in resume.experiences">
+            <div class='resume_left'>
+              <h4 class='company'>{{exp.company}}</h4>
+              <span class='timeframe'>{{exp.timeframe}}</span>
+            </div>
+            <div class='resume_right'>
+              <h4 class='title'>{{exp.title}}</h4>
+              <ul class='description'>
+                <li ng-repeat="desc in exp.description">{{desc}}</li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <h3>Education</h3>
+          <div class="flex education" ng-repeat="edu in resume.educations">
+            <div class='resume_left'>
+              <h4 class='institution'>{{edu.institution}}</h4>
+              <span class='timeframe'>{{edu.timeframe}}</span>
+            </div>
+            <div class='resume_right'>
+              <h4 class='name'>{{edu.name}}</h4>
+              <p class='description'>{{edu.description}}</p>
+              <p ng-hide="{{edu.online}}">
+                <i class="fas fa-map-pin"></i> <span>{{edu.location}}</span>
+              </p>
+              <p ng-show="{{edu.online}}">
+                <a href='{{edu.location}}'>
+                  <i class="fas fa-desktop"></i> <span>{{edu.location}}</span>
+                </a>
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div class="flex">
+            <div class="resume_half">
+              <h3>Skills</h3>
+              <ul>
+                <li class="skill" ng-repeat="skill in resume.skills">{{skill}}</li>
+              </ul>
+            </div>
+            <div class="resume_half">
+              <h3>Languages/Frameworks</h3>
+              <ul>
+                <li class="language" ng-repeat="language in resume.languages">{{language}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
-      <section>
-        <h2>How to Contact</h2>
+      <section id="Contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <form class="" action="mailto:jelliott0222@gmail.com" method="post">
+            <p>Hi, my name is <input type="text" name="name">. My email address is <input type="text" name="mail">. I am interested in <input type="text" name="comment">.</p>
+            <input type="submit" value="Send your message">
+          </form>
+          <p>Want to talk instead?</p>
+          <span class='contactOpt'>
+            <a href='tel:828-228-9071'>
+              <i class="fas fa-mobile-alt"></i> 828.228.9071
+            </a>
+          </span>
+          <p>Prefer a more personal email?</p>
+          <span class='contactOpt'>
+            <a href='mailto:jon.elliott@gmail.com'>
+              <i class="fas fa-envelope"></i> jon.elliott@gmail.com
+            </a>
+          </span>
+        </div>
       </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="">
+      </div>
+    </footer>
 
     <!-- Vendors -->
 

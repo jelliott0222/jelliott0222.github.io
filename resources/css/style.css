@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300|Montserrat:100|Quicksand:300|Roboto+Slab:100|Work+Sans:300");
 /* Color Codes
 
 Purple #1d1160, rgb(29,17,96)
@@ -14,33 +15,52 @@ html {
 
 body {
   background-color: #fff;
-  color: #008ca8;
-  font-family: Helvetica; }
+  color: #008ca8; }
+
+p,
+li,
+span {
+  font-family: "Quicksand"; }
+
+h1,
+h2,
+h4,
+a {
+  font-family: "Montserrat"; }
+
+h3,
+h5 {
+  font-family: "Roboto Slab"; }
 
 a {
   color: #008ca8;
-  font-family: Verdana;
   font-size: 1.5rem; }
 
 p {
-  font-size: 1.5rem; }
+  font-size: 2rem; }
 
 h1 {
-  font-size: 8rem;
+  font-size: 6rem;
   color: #fff; }
 
 h2 {
-  font-size: 3rem;
-  color: #1D1160; }
+  text-align: left;
+  text-transform: uppercase;
+  padding: 2rem 1rem;
+  font-size: 5rem;
+  color: #bbb; }
 
 h3 {
-  font-size: 2rem; }
+  font-size: 3rem; }
+
+h5 {
+  font-size: 3rem; }
 
 header {
   position: relative; }
   header .background {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     z-index: -1;
     position: absolute;
     display: flex;
@@ -58,7 +78,15 @@ header {
     justify-content: flex-end;
     align-items: center; }
     header nav a {
-      padding: 1rem; }
+      padding: 1rem;
+      text-decoration: none;
+      font-size: 2rem;
+      color: #333;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease; }
+      header nav a:hover {
+        color: white;
+        border-bottom: 2px solid #008ca8; }
   header .hero {
     height: 90vh;
     padding-left: 5rem;
@@ -68,20 +96,162 @@ header {
     align-items: flex-start;
     flex-direction: column; }
 
-section {
+main section {
   padding: 5rem 1rem;
-  text-align: center; }
-  section a {
-    display: block;
+  text-align: center;
+  margin: 0 auto; }
+  main section .container {
+    max-width: 1120px;
+    margin: 0 auto; }
+  main section#About .container {
+    display: flex;
+    flex-wrap: wrap; }
+    main section#About .container h2 {
+      flex: 1 0 100%; }
+    main section#About .container div {
+      flex: 1 0 50%;
+      padding: 2rem 0;
+      text-align: left; }
+      main section#About .container div p,
+      main section#About .container div li {
+        color: #333;
+        font-size: 2rem;
+        line-height: 1.5; }
+  main section#Work {
+    background-color: #008ca8; }
+    main section#Work h2 {
+      color: white; }
+  main section .projectContainer {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
     width: 100%;
-    padding: 1rem;
-    text-decoration: none; }
-    section a:hover {
-      background-color: #1d1160;
-      color: #fff; }
-    section a:nth-child(odd) {
-      background-color: #A1A1A4; }
-    section a :nth-child(even) {
-      background-color: #fff; }
+    max-width: 1280px;
+    margin: 0 auto; }
+    main section .projectContainer > div {
+      flex: 1 0 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+    main section .projectContainer:nth-child(odd) .projectImage {
+      order: 2; }
+    main section .projectContainer:nth-child(odd) .projectDetails {
+      order: 1; }
+    main section .projectContainer .projectImage a {
+      width: 100%;
+      height: 100%; }
+    main section .projectContainer .projectImage img {
+      width: 100%;
+      display: block;
+      filter: grayscale(100%);
+      transition: all 0.4s ease-in; }
+    main section .projectContainer:hover .projectImage img {
+      filter: grayscale(0%); }
+    main section .projectContainer:hover .projectDetails {
+      background-color: white; }
+    main section .projectContainer .projectDetails {
+      transition: all 0.4s ease-in; }
+      main section .projectContainer .projectDetails a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        text-decoration: none;
+        font-size: 5rem;
+        color: white;
+        transition: all 0.4s ease-in; }
+    main section .projectContainer:hover .projectDetails a {
+      color: #008ca8; }
+  main section#Resume {
+    background-color: #eee;
+    color: #333;
+    text-align: left; }
+    main section#Resume h3 {
+      padding: 2rem;
+      color: #008ca8; }
+    main section#Resume h4 {
+      font-size: 3rem;
+      padding: 1rem 0; }
+    main section#Resume hr {
+      opacity: 0.2; }
+    main section#Resume span,
+    main section#Resume li,
+    main section#Resume p {
+      font-size: 2rem;
+      line-height: 1.5; }
+    main section#Resume span {
+      padding: 1.5rem;
+      display: inline-block; }
+    main section#Resume .flex {
+      display: flex;
+      padding: 1.5rem 0; }
+      main section#Resume .flex .resume_left {
+        flex: 1 0 40%; }
+      main section#Resume .flex .resume_right {
+        flex: 1 0 60%; }
+      main section#Resume .flex .resume_half {
+        flex: 1 0 50%;
+        text-align: center; }
+        main section#Resume .flex .resume_half:first-child {
+          border-right: 1px solid rgba(51, 51, 51, 0.2); }
+    main section#Resume .education {
+      padding: 0 2rem; }
+      main section#Resume .education .resume_right span,
+      main section#Resume .education .resume_right a {
+        line-height: 1.5;
+        color: #008ca8;
+        text-decoration: none; }
+        main section#Resume .education .resume_right span i,
+        main section#Resume .education .resume_right a i {
+          color: #333; }
+    main section#Resume .experience {
+      padding: 0 2rem; }
+  main section#Contact {
+    background-color: #008ca8; }
+    main section#Contact h2 {
+      color: white; }
+    main section#Contact p,
+    main section#Contact a,
+    main section#Contact span.contactOpt,
+    main section#Contact input[type="text"] {
+      font-size: 2.5rem;
+      line-height: 1.5; }
+    main section#Contact p {
+      color: #003742; }
+    main section#Contact span.contactOpt {
+      color: white; }
+      main section#Contact span.contactOpt i {
+        color: #0fd7ff; }
+      main section#Contact span.contactOpt a {
+        color: white;
+        text-decoration: none; }
+    main section#Contact form {
+      margin: 0 auto;
+      padding: 0 2rem; }
+      main section#Contact form input[type="submit"] {
+        display: block;
+        color: #003742;
+        background-color: #dbf9ff;
+        border: 2px solid #dbf9ff;
+        border-radius: 15px;
+        box-shadow: 1px 1px 2px #333;
+        padding: 1rem 3rem;
+        margin: 4rem auto;
+        font-size: 2rem;
+        font-family: "Quicksand";
+        cursor: pointer;
+        transition: all 0.5s ease; }
+        main section#Contact form input[type="submit"]:hover {
+          background-color: #a8f1ff;
+          border: 2px solid #a8f1ff; }
+      main section#Contact form input[type="text"] {
+        border: none;
+        border-bottom: 2px dotted #0fd7ff;
+        color: white;
+        background-color: #008ca8;
+        font-family: "Montserrat"; }
 
 /*# sourceMappingURL=style.css.map */
