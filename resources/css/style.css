@@ -19,7 +19,8 @@ body {
 
 p,
 li,
-span {
+span,
+label {
   font-family: "Quicksand"; }
 
 h1,
@@ -70,6 +71,15 @@ header {
     background-size: cover;
     background-position: center;
     filter: grayscale(100%); }
+  header .toggle-menu {
+    display: none;
+    height: 10vh;
+    justify-content: flex-end;
+    padding: 2rem 4rem 0; }
+    header .toggle-menu a {
+      text-decoration: none;
+      font-size: 2rem;
+      color: #333; }
   header nav {
     width: 100%;
     height: 10vh;
@@ -98,8 +108,16 @@ header {
 
 main section {
   padding: 5rem 1rem;
-  text-align: center;
+  text-align: left;
   margin: 0 auto; }
+  main section:nth-child(2n) {
+    background-color: #008ca8; }
+    main section:nth-child(2n) h2 {
+      color: #006275; }
+  main section:nth-child(2n+1) {
+    background-color: #eee; }
+    main section:nth-child(2n+1) h2 {
+      color: #333; }
   main section .container {
     max-width: 1120px;
     margin: 0 auto; }
@@ -117,42 +135,41 @@ main section {
         color: #333;
         font-size: 2rem;
         line-height: 1.5; }
-  main section#Work {
-    background-color: #008ca8; }
-    main section#Work h2 {
-      color: white; }
-  main section .projectContainer {
+      main section#About .container div .otherDetails {
+        padding: 0 2rem;
+        list-style: circle; }
+  main section#Work .projectContainer {
     display: flex;
     justify-content: center;
     align-items: stretch;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto; }
-    main section .projectContainer > div {
+    main section#Work .projectContainer > div {
       flex: 1 0 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column; }
-    main section .projectContainer:nth-child(odd) .projectImage {
+    main section#Work .projectContainer:nth-child(odd) .projectImage {
       order: 2; }
-    main section .projectContainer:nth-child(odd) .projectDetails {
+    main section#Work .projectContainer:nth-child(odd) .projectDetails {
       order: 1; }
-    main section .projectContainer .projectImage a {
+    main section#Work .projectContainer .projectImage a {
       width: 100%;
       height: 100%; }
-    main section .projectContainer .projectImage img {
+    main section#Work .projectContainer .projectImage img {
       width: 100%;
       display: block;
       filter: grayscale(100%);
       transition: all 0.4s ease-in; }
-    main section .projectContainer:hover .projectImage img {
+    main section#Work .projectContainer:hover .projectImage img {
       filter: grayscale(0%); }
-    main section .projectContainer:hover .projectDetails {
+    main section#Work .projectContainer:hover .projectDetails {
       background-color: white; }
-    main section .projectContainer .projectDetails {
+    main section#Work .projectContainer .projectDetails {
       transition: all 0.4s ease-in; }
-      main section .projectContainer .projectDetails a {
+      main section#Work .projectContainer .projectDetails a {
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -163,12 +180,10 @@ main section {
         font-size: 5rem;
         color: white;
         transition: all 0.4s ease-in; }
-    main section .projectContainer:hover .projectDetails a {
+    main section#Work .projectContainer:hover .projectDetails a {
       color: #008ca8; }
   main section#Resume {
-    background-color: #eee;
-    color: #333;
-    text-align: left; }
+    color: #333; }
     main section#Resume h3 {
       padding: 2rem;
       color: #008ca8; }
@@ -198,7 +213,7 @@ main section {
         main section#Resume .flex .resume_half:first-child {
           border-right: 1px solid rgba(51, 51, 51, 0.2); }
     main section#Resume .education {
-      padding: 0 2rem; }
+      padding: 1rem 2rem; }
       main section#Resume .education .resume_right span,
       main section#Resume .education .resume_right a {
         line-height: 1.5;
@@ -207,31 +222,61 @@ main section {
         main section#Resume .education .resume_right span i,
         main section#Resume .education .resume_right a i {
           color: #333; }
+      main section#Resume .education span {
+        padding: 1.5rem 0; }
+        main section#Resume .education span i {
+          padding-right: 0.5rem; }
     main section#Resume .experience {
-      padding: 0 2rem; }
-  main section#Contact {
-    background-color: #008ca8; }
-    main section#Contact h2 {
-      color: white; }
-    main section#Contact p,
-    main section#Contact a,
-    main section#Contact span.contactOpt,
-    main section#Contact input[type="text"] {
+      padding: 1rem 2rem; }
+      main section#Resume .experience span {
+        padding: 1.5rem 0; }
+        main section#Resume .experience span i {
+          padding-right: 0.5rem; }
+    main section#Resume .technologies .language {
+      display: flex;
+      padding: 0 5rem; }
+      main section#Resume .technologies .language span {
+        flex: 1 0 50%;
+        padding: 0; }
+        main section#Resume .technologies .language span:first-child {
+          text-align: left; }
+        main section#Resume .technologies .language span:last-child {
+          text-align: right; }
+          main section#Resume .technologies .language span:last-child i.fas {
+            color: #008ca8; }
+          main section#Resume .technologies .language span:last-child i.far {
+            color: #999; }
+  main section#Contact .container {
+    display: flex;
+    flex-wrap: wrap; }
+    main section#Contact .container h2 {
+      color: #006275; }
+    main section#Contact .container h2,
+    main section#Contact .container h4 {
+      flex: 1 0 100%; }
+    main section#Contact .container h4 {
+      color: white;
+      font-size: 4rem;
+      padding: 0 1rem 3rem;
+      text-align: left; }
+    main section#Contact .container p,
+    main section#Contact .container a,
+    main section#Contact .container span.contactOpt,
+    main section#Contact .container input[type="text"],
+    main section#Contact .container textarea,
+    main section#Contact .container label {
       font-size: 2.5rem;
       line-height: 1.5; }
-    main section#Contact p {
+    main section#Contact .container p {
       color: #003742; }
-    main section#Contact span.contactOpt {
-      color: white; }
-      main section#Contact span.contactOpt i {
-        color: #0fd7ff; }
-      main section#Contact span.contactOpt a {
-        color: white;
-        text-decoration: none; }
-    main section#Contact form {
+    main section#Contact .container .left,
+    main section#Contact .container .right {
+      flex: 1 0 50%;
+      padding: 0 2rem; }
+    main section#Contact .container form {
       margin: 0 auto;
       padding: 0 2rem; }
-      main section#Contact form input[type="submit"] {
+      main section#Contact .container form input[type="submit"] {
         display: block;
         color: #003742;
         background-color: #dbf9ff;
@@ -244,14 +289,92 @@ main section {
         font-family: "Quicksand";
         cursor: pointer;
         transition: all 0.5s ease; }
-        main section#Contact form input[type="submit"]:hover {
+        main section#Contact .container form input[type="submit"]:hover {
           background-color: #a8f1ff;
           border: 2px solid #a8f1ff; }
-      main section#Contact form input[type="text"] {
+      main section#Contact .container form input[type="text"],
+      main section#Contact .container form textarea {
         border: none;
         border-bottom: 2px dotted #0fd7ff;
         color: white;
         background-color: #008ca8;
-        font-family: "Montserrat"; }
+        font-family: "Montserrat";
+        transition: all 0.3s ease; }
+        main section#Contact .container form input[type="text"]:focus,
+        main section#Contact .container form textarea:focus {
+          border-bottom: 2px dotted white; }
+      main section#Contact .container form input[type="text"],
+      main section#Contact .container form textarea,
+      main section#Contact .container form label {
+        width: 100%; }
+      main section#Contact .container form label {
+        color: white;
+        display: block;
+        text-align: left; }
+    main section#Contact .container span.contactOpt {
+      color: white;
+      display: block;
+      padding: 1rem 0;
+      text-align: left; }
+      main section#Contact .container span.contactOpt a {
+        color: white;
+        text-decoration: none; }
+        main section#Contact .container span.contactOpt a i {
+          color: #0fd7ff;
+          transition: all 0.4s ease; }
+        main section#Contact .container span.contactOpt a:hover i {
+          color: white; }
+    main section#Contact .container .socialIcons {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 1rem 0; }
+      main section#Contact .container .socialIcons a {
+        color: #0fd7ff;
+        padding: 0 2rem 0 0;
+        transition: all 0.4s ease; }
+        main section#Contact .container .socialIcons a:hover {
+          color: white; }
+
+@media only screen and (max-width: 600px) {
+  main section#About .container div {
+    flex: 1 0 100%; }
+  main section#Work .projectContainer {
+    flex-wrap: wrap; }
+    main section#Work .projectContainer > div {
+      flex: 1 0 100%; }
+    main section#Work .projectContainer .projectDetails a {
+      justify-content: flex-start;
+      font-size: 3rem; }
+    main section#Work .projectContainer:nth-child(2n+1) .projectDetails {
+      order: 2; }
+    main section#Work .projectContainer:nth-child(2n+1) .projectImage {
+      order: 1; }
+  main section#Resume .flex {
+    flex-wrap: wrap; }
+    main section#Resume .flex .resume_left,
+    main section#Resume .flex .resume_right {
+      flex: 1 0 100%; } }
+@media only screen and (max-width: 500px) {
+  header .toggle-menu {
+    display: flex; }
+    header .toggle-menu.active {
+      background-color: #000;
+      opacity: 0.8; }
+      header .toggle-menu.active a {
+        color: #fff; }
+  header nav {
+    display: none;
+    position: absolute;
+    height: 90vh;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000;
+    opacity: 0.8; }
+    header nav.active {
+      display: flex; }
+    header nav a {
+      color: #fff;
+      font-size: 4rem; } }
 
 /*# sourceMappingURL=style.css.map */

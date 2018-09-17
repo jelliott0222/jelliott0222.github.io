@@ -15,11 +15,14 @@
       <div class="background">
 
       </div>
+      <div class="toggle-menu">
+        <a href="#">Menu</a>
+      </div>
       <nav>
-        <a href='#About'>About</a>
-        <a href='#Work'>Work</a>
-        <a href='#Resume'>Resume</a>
-        <a href='#Contact'>Contact</a>
+        <a href='#About' target="_self">About</a>
+        <a href='#Work' target="_self">Work</a>
+        <a href='#Resume' target="_self">Resume</a>
+        <a href='#Contact' target="_self">Contact</a>
       </nav>
       <div class="hero">
         <h1>Hi, I'm Jon.</h1>
@@ -38,10 +41,10 @@
               <li>Location: Hickory, NC, USA</li>
             </ul>
             <p>Other personal notes:
-              <ul>
-                <li>Funniest person I've ever met.</li>
-                <li>Career .025 batting average in Little League.</li>
-                <li></li>
+              <ul class="otherDetails">
+                <li>Font-family enthusiast</li>
+                <li>Pun maker extraordinairre</li>
+                <li>Freelance rec league basketball player</li>
               </ul>
             </p>
           </div>
@@ -71,7 +74,7 @@
           <div class="flex experience" ng-repeat="exp in resume.experiences">
             <div class='resume_left'>
               <h4 class='company'>{{exp.company}}</h4>
-              <span class='timeframe'>{{exp.timeframe}}</span>
+              <span class='timeframe'><i class="fas fa-fw fa-calendar-alt"></i> {{exp.timeframe}}</span>
             </div>
             <div class='resume_right'>
               <h4 class='title'>{{exp.title}}</h4>
@@ -85,33 +88,38 @@
           <div class="flex education" ng-repeat="edu in resume.educations">
             <div class='resume_left'>
               <h4 class='institution'>{{edu.institution}}</h4>
-              <span class='timeframe'>{{edu.timeframe}}</span>
+              <span class='timeframe'><i class="fas fa-fw fa-calendar-alt"></i> {{edu.timeframe}}</span>
             </div>
             <div class='resume_right'>
               <h4 class='name'>{{edu.name}}</h4>
               <p class='description'>{{edu.description}}</p>
               <p ng-hide="{{edu.online}}">
-                <i class="fas fa-map-pin"></i> <span>{{edu.location}}</span>
+                <span><i class="fas fa-fw fa-map-pin"></i>{{edu.location}}</span>
               </p>
               <p ng-show="{{edu.online}}">
                 <a href='{{edu.location}}'>
-                  <i class="fas fa-desktop"></i> <span>{{edu.location}}</span>
+                  <span><i class="fas fa-fw fa-desktop"></i> {{edu.location}}</span>
                 </a>
               </p>
             </div>
           </div>
           <hr>
           <div class="flex">
-            <div class="resume_half">
+            <div class="resume_half skills">
               <h3>Skills</h3>
               <ul>
                 <li class="skill" ng-repeat="skill in resume.skills">{{skill}}</li>
               </ul>
             </div>
-            <div class="resume_half">
-              <h3>Languages/Frameworks</h3>
+            <div class="resume_half technologies">
+              <h3>Technologies</h3>
               <ul>
-                <li class="language" ng-repeat="language in resume.languages">{{language}}</li>
+                <li class="language" ng-repeat="language in resume.languages">
+                  <span>{{language.name}}</span>
+                  <span>
+                    <i ng-repeat="star in language.stars" class='{{star}}'></i>
+                  </span>
+                </li>
               </ul>
             </div>
           </div>
@@ -120,22 +128,41 @@
       <section id="Contact">
         <div class="container">
           <h2>Contact</h2>
-          <form class="" action="mailto:jelliott0222@gmail.com" method="post">
-            <p>Hi, my name is <input type="text" name="name">. My email address is <input type="text" name="mail">. I am interested in <input type="text" name="comment">.</p>
-            <input type="submit" value="Send your message">
-          </form>
-          <p>Want to talk instead?</p>
-          <span class='contactOpt'>
-            <a href='tel:828-228-9071'>
-              <i class="fas fa-mobile-alt"></i> 828.228.9071
-            </a>
-          </span>
-          <p>Prefer a more personal email?</p>
-          <span class='contactOpt'>
-            <a href='mailto:jon.elliott@gmail.com'>
-              <i class="fas fa-envelope"></i> jon.elliott@gmail.com
-            </a>
-          </span>
+          <h4>Let's talk.</h4>
+          <div class="left">
+            <form class="" action="mailto:jelliott0222@gmail.com" method="post">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name">
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email">
+              <label for="comment">Questions or Comments</label>
+              <textarea name="comment" id="comment"></textarea>
+              <input type="submit" value="Send your message">
+            </form>
+          </div>
+          <div class="right">
+            <span class='contactOpt'>
+              <a href='tel:828-228-9071'>
+                <i class="fas fa-fw fa-mobile-alt"></i> 828.228.9071
+              </a>
+            </span>
+            <span class='contactOpt'>
+              <a href='mailto:jon.elliott@gmail.com'>
+                <i class="fas fa-fw fa-envelope"></i> jon.elliott@gmail.com
+              </a>
+            </span>
+            <div class="socialIcons">
+              <a href="https://www.facebook.com/jon.elliott.73">
+                <i class="fab fa-facebook-square fa-2x"></i>
+              </a>
+              <a href="https://twitter.com/thebatumsquad">
+                <i class="fab fa-twitter-square fa-2x"></i>
+              </a>
+              <a href="https://github.com/jelliott0222">
+                <i class="fab fa-github-square fa-2x"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
