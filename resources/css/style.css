@@ -42,7 +42,9 @@ p {
 
 h1 {
   font-size: 6rem;
-  color: #fff; }
+  color: #fff;
+  text-shadow: 1px 1px 5px #000;
+  z-index: 50; }
 
 h2 {
   text-align: left;
@@ -55,7 +57,12 @@ h3 {
   font-size: 3rem; }
 
 h5 {
-  font-size: 3rem; }
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: Montserrat;
+  text-shadow: 1px 1px 5px #000;
+  color: #008ca8;
+  z-index: 50; }
 
 header {
   position: relative; }
@@ -67,10 +74,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("../images/man1.jpg");
+    background-image: url("../images/personal/6.jpg");
     background-size: cover;
-    background-position: center;
-    filter: grayscale(100%); }
+    background-position: center; }
   header .toggle-menu {
     display: none;
     height: 10vh;
@@ -100,11 +106,17 @@ header {
   header .hero {
     height: 90vh;
     padding-left: 5rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.2) 90%, rgba(255, 255, 255, 0.3) 100%);
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column; }
+  header .hero-overlay {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 90%, black 100%);
+    position: absolute;
+    height: 100%;
+    width: 25%;
+    top: 0;
+    z-index: 30; }
 
 main section {
   padding: 5rem 1rem;
