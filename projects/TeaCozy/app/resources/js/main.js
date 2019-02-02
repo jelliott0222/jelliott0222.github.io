@@ -7,5 +7,6 @@ $(function() {
     var activeTab = '#' + str;
     $('.location-container').removeClass('active');
     $(activeTab).addClass('active');
+    return false;
   });
 });
