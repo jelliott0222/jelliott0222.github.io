@@ -356,12 +356,10 @@ main section {
       main section#Resume .flex .resume_half:first-child {
         border-right: 0px; } }
 @media only screen and (max-width: 600px) {
-  header .hero {
-    padding-left: 3rem; }
-    header .hero h1 {
-      font-size: 4rem; }
-    header .hero h5 {
-      font-size: 3rem; }
+  header .hero h1 {
+    font-size: 4rem; }
+  header .hero h5 {
+    font-size: 3rem; }
 
   main section#About .container div {
     flex: 1 0 100%; }
