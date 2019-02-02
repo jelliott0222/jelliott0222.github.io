@@ -508,10 +508,13 @@ footer {
       text-align: center;
       transition: all 0.5s ease;
       &.active {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100vh - 58px);
       }
       li a {
-        padding: 10px 20px;
+        padding: 3rem;
         display: block;
         border-bottom: none;
         &:hover {

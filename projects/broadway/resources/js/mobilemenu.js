@@ -4,3 +4,9 @@ $(function() {
     return false;
   });
 });
+
+$(document).ready(function () {
+  $('.logo-nav-bar li a').click(function(event) {
+    $('.logo-nav-bar ul').toggleClass('active');
+  });
+});
