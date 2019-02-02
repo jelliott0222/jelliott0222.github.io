@@ -1,5 +1,8 @@
 /*Sass Variables*/
 /*General Styles*/
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: Raleway;
   font-size: 16px;
@@ -204,7 +207,7 @@ main {
         background-color: seashell; }
         main .locations-img-container .locations-group .location-tabs li {
           list-style: none;
-          margin: 0 1rem; }
+          margin: 0; }
           main .locations-img-container .locations-group .location-tabs li a {
             display: block;
             padding: 1rem;
