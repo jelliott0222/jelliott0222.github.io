@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Fauna+One|Raleway");
 /* General Styles */
 * {
-  transition: all 0.4s ease; }
+  transition: all 0.4s ease;
+  box-sizing: border-box; }
 
 body {
   display: flex;
@@ -147,12 +148,15 @@ main p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 10px;
   font-size: 50px;
   font-weight: bold;
   color: #fff;
   text-shadow: 1px 1px 8px #333;
-  text-align: center;
-  padding: 100px; }
+  text-align: center; }
 
 /* Info Sections */
 #info {
@@ -338,16 +342,18 @@ footer {
     margin-top: 15px;
     border-top: 1px solid #fff;
     text-align: center;
-    transition: all 0.5s ease; }
+    transition: all 0.5s ease;
+    box-sizing: border-box; }
     header nav ul.active {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: calc(100vh - 58px); }
+      height: calc(100vh - 73px); }
     header nav ul li a {
-      padding: 3rem;
+      padding: 1rem;
       display: block;
-      border-bottom: none; }
+      border-bottom: none;
+      font-size: 2rem; }
       header nav ul li a:hover {
         background-color: #fff;
         color: #5B565D;

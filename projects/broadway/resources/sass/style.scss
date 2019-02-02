@@ -10,6 +10,7 @@ $font-text: 'Fauna One';
 
 * {
   transition: all 0.4s ease;
+  box-sizing: border-box;
 }
 
 body {
@@ -234,12 +235,17 @@ main {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 10px;
+
   font-size: 50px;
   font-weight: bold;
   color: #fff;
   text-shadow: 1px 1px 8px #333;
   text-align: center;
-  padding: 100px;
 }
 
 
@@ -507,16 +513,18 @@ footer {
       border-top: 1px solid #fff;
       text-align: center;
       transition: all 0.5s ease;
+      box-sizing: border-box;
       &.active {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: calc(100vh - 58px);
+        height: calc(100vh - 73px);
       }
       li a {
-        padding: 3rem;
+        padding: 1rem;
         display: block;
         border-bottom: none;
+        font-size: 2rem;
         &:hover {
           background-color: #fff;
           color: #5B565D;
