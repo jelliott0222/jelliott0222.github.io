@@ -393,15 +393,22 @@ footer {
     display: none;
     overflow: hidden;
     width: 100%;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 100%;
-    transition: all 0.3s ease; }
+    transition: all 0.3s ease;
+    flex-direction: column;
+    padding: 2rem 0; }
+    header nav a {
+      padding: 1rem 0; }
   header .header-column .toggle-menu {
     display: block; }
   header .active {
     display: block;
-    left: 0; } }
+    left: 0; }
+
+  main .hero .hero-text-container h1 {
+    font-size: 3rem; } }
 
 /*# sourceMappingURL=style.css.map */
