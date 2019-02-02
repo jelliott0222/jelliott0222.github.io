@@ -1,4 +1,5 @@
 $(function() {
+  console.log($('.location-tabs li a'));
   $('.location-tabs li a').click(function() {
     $('.location-tabs li a').removeClass('active');
     $(this).addClass('active');
