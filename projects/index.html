@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html ng-app="portfolio">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700|Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/reset.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <base href="/">
+  </head>
+  <body class='grid-container' ng-controller="MainController" ng-cloak>
+    <header>
+      <div class="background">
+
+      </div>
+      <div class="toggle-menu">
+        <a href="#">Menu</a>
+      </div>
+      <nav>
+        <a href='#About' target="_self">About</a>
+        <a href='#Work' target="_self">Work</a>
+        <a href='#Resume' target="_self">Resume</a>
+        <a href='#Contact' target="_self">Contact</a>
+      </nav>
+      <div class="hero">
+        <div class="hero-overlay">
+          <h1>Hi, I'm Jon.</h1>
+          <h5>I'm a web developer.</h5>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="About">
+        <div class="container">
+          <h2>About</h2>
+          <div class="details">
+            <ul>
+              <li>Name: Jon Elliott</li>
+              <li>Age: 31</li>
+              <li>Location: Hickory, NC, USA</li>
+            </ul>
+            <p>Other personal notes:
+              <ul class="otherDetails">
+                <li>Font-family enthusiast</li>
+                <li>Pun maker extraordinaire</li>
+                <li>Freelance rec league basketball player</li>
+              </ul>
+            </p>
+          </div>
+          <div class="summary">
+            <p>I am an aspiring web developer with a focus on front-end technologies. My design process centers around responsiveness and a modern look and feel. I am constantly looking for inspiration and ideas from anywhere and everywhere on the Internet.</p>
+          </div>
+        </div>
+      </section>
+      <section id="Work">
+        <div class="container">
+          <h2>Work</h2>
+          <div class="projectContainer" ng-repeat='project in projects'>
+            <div class="projectImage">
+              <a href="{{project.url}}"><img src="{{project.imageUrl}}" alt="{{project.name}} Site"></a>
+            </div>
+            <div class="projectDetails">
+              <a href='{{project.url}}' target="_blank">{{project.name}}</a>
+              <!-- <p>{{project.description}}</p> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Resume">
+        <div class="container">
+          <h2>Resume</h2>
+          <h3>Experience</h3>
+          <div class="flex experience" ng-repeat="exp in resume.experiences">
+            <div class='resume_left'>
+              <h4 class='company'>{{exp.company}}</h4>
+              <span class='timeframe'><i class="fas fa-fw fa-calendar-alt"></i> {{exp.timeframe}}</span>
+            </div>
+            <div class='resume_right'>
+              <h4 class='title'>{{exp.title}}</h4>
+              <ul class='description'>
+                <li ng-repeat="desc in exp.description">{{desc}}</li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+          <h3>Education</h3>
+          <div class="flex education" ng-repeat="edu in resume.educations">
+            <div class='resume_left'>
+              <h4 class='institution'>{{edu.institution}}</h4>
+              <span class='timeframe'><i class="fas fa-fw fa-calendar-alt"></i> {{edu.timeframe}}</span>
+            </div>
+            <div class='resume_right'>
+              <h4 class='name'>{{edu.name}}</h4>
+              <p class='description'>{{edu.description}}</p>
+              <p ng-hide="{{edu.online}}">
+                <span><i class="fas fa-fw fa-map-pin"></i>{{edu.location}}</span>
+              </p>
+              <p ng-show="{{edu.online}}">
+                <a href='{{edu.location}}'>
+                  <span><i class="fas fa-fw fa-desktop"></i> {{edu.location}}</span>
+                </a>
+              </p>
+            </div>
+          </div>
+          <hr>
+          <div class="flex">
+            <div class="resume_half skills">
+              <h3>Skills</h3>
+              <ul>
+                <li class="skill" ng-repeat="skill in resume.skills">{{skill}}</li>
+              </ul>
+            </div>
+            <div class="resume_half technologies">
+              <h3>Technologies</h3>
+              <ul>
+                <li class="language" ng-repeat="language in resume.languages">
+                  <span>{{language.name}}</span>
+                  <span>
+                    <i ng-repeat="star in language.stars" class='{{star}}'></i>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <h4>Let's talk.</h4>
+          <div class="left">
+            <form class="" action="mailto:jelliott0222@gmail.com" method="post">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="name">
+              <label for="email">Email</label>
+              <input type="text" name="email" id="email">
+              <label for="comment">Questions or Comments</label>
+              <textarea name="comment" id="comment"></textarea>
+              <input type="submit" value="Send your message">
+            </form>
+          </div>
+          <div class="right">
+            <span class='contactOpt'>
+              <a href='tel:828-228-9071'>
+                <i class="fas fa-fw fa-mobile-alt"></i> 828.228.9071
+              </a>
+            </span>
+            <span class='contactOpt'>
+              <a href='mailto:jon.elliott@gmail.com'>
+                <i class="fas fa-fw fa-envelope"></i> jon.elliott@gmail.com
+              </a>
+            </span>
+            <div class="socialIcons">
+              <a href="https://www.facebook.com/jon.elliott.73">
+                <i class="fab fa-facebook-square fa-2x"></i>
+              </a>
+              <a href="https://twitter.com/thebatumsquad">
+                <i class="fab fa-twitter-square fa-2x"></i>
+              </a>
+              <a href="https://github.com/jelliott0222">
+                <i class="fab fa-github-square fa-2x"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Vendors -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.js" charset="utf-8"></script>
+    <script src="https://code.angularjs.org/1.7.2/angular-route.js" charset="utf-8"></script>
+
+    <!-- Application Files -->
+    <script src="resources/js/app.js" charset="utf-8"></script>
+    <script src="controllers/MainController.js" charset="utf-8"></script>
+    <script type="text/javascript" src='resources/js/mobilemenu.js'></script>
+  </body>
+</html>
