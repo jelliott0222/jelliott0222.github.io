@@ -66,8 +66,8 @@ export default function Contact() {
           </div>
           {/* <div className="span-divider">|</div> */}
           <div className="contact-item">
-            <a href="mailto:mfc@gmail.com">
-              Email us at <Icon icon={faEnvelope} /> mfc@gmail.com
+            <a href="mailto:mfckpope@yahoo.com">
+              Email us at <Icon icon={faEnvelope} /> mfckpope@yahoo.com
             </a>
           </div>
           {/* <div className="span-divider">|</div> */}
