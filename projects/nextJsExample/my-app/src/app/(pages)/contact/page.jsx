@@ -45,7 +45,7 @@ export default function Contact() {
   return (
     <main className="contact">
       <div className="header-image">
-        <h1>Contact Us</h1>
+        <h1>Hours and Information</h1>
       </div>
       <section className="hours">
         <h3>Operating Hours</h3>

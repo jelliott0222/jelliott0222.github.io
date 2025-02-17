@@ -35,7 +35,7 @@ export default function Header() {
           About
         </Link>
         <Link href="contact" onClick={() => setOpen(false)}>
-          Contact Us
+          Hours & Info
         </Link>
       </nav>
       <div className="mobile-menu">

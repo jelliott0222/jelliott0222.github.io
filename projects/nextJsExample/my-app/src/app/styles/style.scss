@@ -344,6 +344,14 @@ main {
             text-shadow: 0.2rem 0.2rem darken($darkRed, 10%);
           }
 
+          p {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: $headingFont;
+            font-size: 2rem;
+            flex: 1 0 100%;
+          }
+
           a {
             font-size: 2.4rem;
             color: $lightRed;
@@ -411,7 +419,7 @@ main {
       justify-content: center;
       align-items: center;
       height: 30rem;
-      background-image: url("/menu1.jpg");
+      background-image: url("menu1.jpg");
       background-position: center;
       background-size: cover;
     }
@@ -561,7 +569,7 @@ main {
     padding: 0 0 2rem;
 
     div.header-image {
-      background-image: url("/menu1.jpg");
+      background-image: url("menu1.jpg");
     }
 
     // h1 {
@@ -591,7 +599,7 @@ main {
 
         &.active {
           background-color: $darkerRed;
-          box-shadow: 1px 1px 2px darken($red, 40%);
+          box-shadow: 0.1rem 0.1rem 0.2rem darken($red, 40%);
         }
       }
     }
@@ -616,6 +624,13 @@ main {
     //     }
     //   }
     // }
+
+    p.catering-num {
+      flex: 1 0 100%;
+      text-align: center;
+      font-size: 2rem;
+      padding: 1rem 0;
+    }
 
     div.left-menu,
     div.right-menu,
@@ -695,6 +710,7 @@ main {
 
       .description {
         text-align: center;
+        width: 100%;
         color: $lighterRed;
       }
 
@@ -988,7 +1004,7 @@ main {
 
   &.about {
     .header-image {
-      background-image: url("/usable8.jpg");
+      background-image: url("about.jpg");
     }
 
     section {
@@ -1110,7 +1126,7 @@ main {
 
   &.contact {
     .header-image {
-      background-image: url("/usable16.jpg");
+      background-image: url("contact.jpg");
     }
 
     section {

@@ -25,7 +25,7 @@ export default function Footer() {
           <Link href="/">Home</Link>
           <Link href="/menu">Menu</Link>
           <Link href="/about">About</Link>
-          <Link href="/contact">Contact Us</Link>
+          <Link href="/contact">Hours & Info</Link>
           <a
             className="facebook"
             href="https://www.facebook.com/MountainFriedChickenHickory"

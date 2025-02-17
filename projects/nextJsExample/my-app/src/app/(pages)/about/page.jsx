@@ -13,18 +13,18 @@ export default function About() {
         <article>
           <h3>Our Story</h3>
           <p>
-            Mountain Fried Chicken was created in 1985 by "Chicken" Charlie
-            Taylor in Winston-Salem, NC. Brother-in-laws Kyle Pope and Jeff
-            Little, avid golfers, would stop by the Clemmons location in the
-            2000s while golfing nearby. They became quick fans of the
-            restaurant, so much so that Kyle eventually began running the
-            Clemmons location. In 2012, Kyle, along with his wife Rita, her
-            sister Anita Little, and Jeff, Anita's husband, they had the idea of
-            moving the restaurant closer to home in Hickory, NC. Since that
-            time, the four owners have been passionate about pleasing the
-            customers in the surrounding Hickory area with fair-priced,
-            delicious chicken. Customers and employees alike feel at home and
-            part of the Mountain Fried Chicken family.
+            Mountain Fried Chicken was founded in 1985 by "Chicken" Charlie
+            Taylor in Winston-Salem, NC. Kyle Pope and Jeff Little, both avid
+            golfers, became regulars at the Clemmons location in 2001, stopping
+            by whenever they played nearby. Their love for the restaurant grew
+            so much that they eventually had the opportunity to buy the Clemmons
+            location, with Kyle taking over its management. In 2012, Kyle, his
+            wife Rita, Jeff and Anita Little decided to move the restaurant
+            closer to home in Hickory, NC. Since then, Kyle has been running the
+            business, and the four owners have remained dedicated to serving the
+            Hickory community with delicious, affordable chicken. More than just
+            a restaurant, Mountain Fried Chicken has become a place where
+            customers and employees alike feel like family.
           </p>
           {/* About Us notes
             Kyle and Jeff used to golf in Clemmons and eat at MFC, always talked about having it in Hickory.
@@ -40,12 +40,15 @@ export default function About() {
         <article>
           <figure>
             <img
-              src="owners1.jpg"
-              alt="Left to right, Rita Pope and Anita Little"
+              src="owners.png"
+              alt="(Left to right) Co-owners Jeff Little, Anita Little, Rita Pope, and Kyle Pope"
               loading="lazy"
             />
             <figcaption>
-              <span>Co-owners Rita Pope and Anita Little</span>
+              <span>
+                (Left to right) Co-owners Jeff Little, Anita Little, Rita Pope,
+                and Kyle Pope
+              </span>
             </figcaption>
           </figure>
         </article>

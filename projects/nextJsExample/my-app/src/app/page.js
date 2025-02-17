@@ -7,7 +7,7 @@ export default function Home() {
       <section className="hero-container">
         <Image
           className={""}
-          src="/mfcStore1.jpg"
+          src="mfcStore1.jpg"
           alt="Mountain Fried Chicken storefront image"
           width={1600}
           height={1068}
@@ -21,7 +21,7 @@ export default function Home() {
         <article>
           <Image
             className={""}
-            src="/menu1.jpg"
+            src="menu1.jpg"
             alt="Various sides"
             width={1600}
             height={1068}
@@ -29,9 +29,7 @@ export default function Home() {
           />
           <div className="img-text-container">
             <h2>What's cookin'?</h2>
-            <Link href="/menu">
-              View Menu
-            </Link>
+            <Link href="/menu">View Menu</Link>
           </div>
         </article>
         <article>
@@ -41,7 +39,7 @@ export default function Home() {
           </div>
           <Image
             className={""}
-            src="/aboutUs1.jpg"
+            src="aboutUs1.jpg"
             alt="Various sides"
             width={1600}
             height={1068}
@@ -51,7 +49,7 @@ export default function Home() {
         <article>
           <Image
             className={""}
-            src="/driveThru.jpg"
+            src="driveThru.jpg"
             alt="Various sides"
             width={1600}
             height={1068}
@@ -59,7 +57,12 @@ export default function Home() {
           />
           <div className="img-text-container">
             <h2>Get in touch!</h2>
-            <a href="/contact">Contact info</a>
+            <p>
+              Monday - Saturday
+              <br />
+              11:30 a.m. - 8:00 p.m.
+            </p>
+            <a href="/contact">Hours and Location Info</a>
           </div>
         </article>
       </section>

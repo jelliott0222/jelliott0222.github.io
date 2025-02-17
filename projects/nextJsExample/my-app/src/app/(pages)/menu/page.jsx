@@ -24,7 +24,7 @@ export default function Menu() {
         title: "Traditional Wings",
         description:
           "Dipping sauces available: Hot, Ranch, Honey Mustard, BBQ. Extra sauce is $0.28 each.",
-        img: "/wings.jpg",
+        img: "wings.jpg",
         items: [
           {
             id: 1,
@@ -146,7 +146,7 @@ export default function Menu() {
         id: 4,
         title: "Chicken Dinners",
         description: null,
-        img: "/chicken.jpg",
+        img: "chicken.jpg",
         items: [
           {
             id: 1,
@@ -366,7 +366,7 @@ export default function Menu() {
         id: 8,
         title: "Sides",
         description: null,
-        img: "/sides1.jpg",
+        img: "sides1.jpg",
         list: [
           {
             id: 1,
@@ -522,7 +522,7 @@ export default function Menu() {
         id: 10,
         title: "Desserts",
         description: null,
-        img: "/dessert1.jpg",
+        img: "desserts.png",
         list: [
           {
             id: 1,
@@ -574,7 +574,7 @@ export default function Menu() {
         id: 1,
         title: "Chicken",
         description: "Only chicken, no sides or rolls. Prices per piece.",
-        img: "/chicken.jpg",
+        img: "chicken.jpg",
         list: null,
         items: [
           {
@@ -679,7 +679,7 @@ export default function Menu() {
         id: 4,
         title: "Sides",
         description: null,
-        img: "/sides1.jpg",
+        img: "sides1.jpg",
         list: [
           {
             id: 1,
@@ -950,6 +950,11 @@ export default function Menu() {
             </a>
           ))}
         </nav> */}
+        {activeMenu === "catering" && (
+          <p className="catering-num">
+            For catering, please call <a href="tel:8288551333">828.855.1333</a>
+          </p>
+        )}
         <div className={`left-menu${activeMenu === "dinner" ? " active" : ""}`}>
           {dinnerMenu.sections.slice(0, 4).map((s, key) => (
             <React.Fragment key={key}>
