@@ -838,7 +838,7 @@ main.menu div.header-image {
   justify-content: center;
   align-items: center;
   height: 30rem;
-  background-image: url(_next/static/media/menu1.75bd35a5.jpg);
+  background-image: url(menu1.jpg);
   background-position: 50%;
   background-size: cover;
 }
@@ -944,7 +944,7 @@ main.menu2 {
   padding: 0 0 2rem;
 }
 main.menu2 div.header-image {
-  background-image: url(_next/static/media/menu1.75bd35a5.jpg);
+  background-image: url(menu1.jpg);
 }
 main.menu2 nav.menu-buttons {
   flex: 1 0 100%;
@@ -1244,7 +1244,7 @@ main.menu3 .top:hover {
   border-color: transparent;
 }
 main.about .header-image {
-  background-image: url(_next/static/media/about.aa679cfc.jpg);
+  background-image: url(about.jpg);
 }
 main.about section.story {
   display: flex;
@@ -1329,7 +1329,7 @@ main.about section.reviews .review-container .review a:hover {
   color: #f6ad9b;
 }
 main.contact .header-image {
-  background-image: url(_next/static/media/contact.66f09523.jpg);
+  background-image: url(contact.jpg);
 }
 main.contact section {
   text-align: center;
