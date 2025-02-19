@@ -15,7 +15,7 @@ export default function Home() {
   }
   const today = new Date();
   const todayFormatted = formatDate(today);
-  const weatherDate = "February 20, 2025";
+  const weatherDate = "February 19, 2025";
   const weatherDateFormatted = formatDate(new Date(weatherDate));
   return (
     <main className="home">
