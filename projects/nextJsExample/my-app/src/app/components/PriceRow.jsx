@@ -14,7 +14,6 @@ export default function PriceRow({ label, description, price, dots }) {
         </span>
       </div>
       {description && <span className="item-desc">{description}</span>}
-      {/* {dots && <span className="dots"></span>} */}
     </div>
   );
 }

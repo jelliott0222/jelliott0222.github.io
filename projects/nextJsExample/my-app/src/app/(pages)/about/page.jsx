@@ -8,7 +8,6 @@ export default function About() {
       <div className="header-image">
         <h1>About Us</h1>
       </div>
-      {/* Story about business, plus employee pics */}
       <section className="story">
         <article>
           <h3>Our Story</h3>
@@ -26,17 +25,7 @@ export default function About() {
             a restaurant, Mountain Fried Chicken has become a place where
             customers and employees alike feel like family.
           </p>
-          {/* About Us notes
-            Kyle and Jeff used to golf in Clemmons and eat at MFC, always talked about having it in Hickory.
-            Kyle was laid off, we bought it, and ran it in Clemmons for a while.
-            In 2012, opened a new one in Hickory.
-            Passionate about pleasing customers.
-            Fair priced
-            Employees make it feel like home.
-            Customers feel like part of the family.
-          */}
         </article>
-        {/* The Carolina Foodie Review - https://www.facebook.com/share/p/15aNb43sfN/ */}
         <article>
           <figure>
             <img
@@ -74,7 +63,6 @@ export default function About() {
       </section>
       <section className="reviews">
         <h3>Reviews</h3>
-        {/* <video height="281" width="500" preload="auto" style={{ display: 'block' }} className="_ox1 _21y0" data-video-width="500" data-video-height="281" id="u_0_5_bD" src="blob:https://www.facebook.com/f0e6c4a8-4d05-429d-a0bf-21b872245444"></video> */}
         <div className="review-container">
           <div className="review">
             <h5>
@@ -95,11 +83,6 @@ export default function About() {
               </a>
               .
             </p>
-            {/* <video>
-              <source src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fwilliamwesleyhawn%2Fposts%2Fpfbid0eotscNMjKow6c7pHDiop8idsDtB288kAxG7MoiEiukLmgumsTiSgLsMPM99ac4sgl&show_text=true&width=500" />
-            </video> */}
-
-            {/* <ReviewFrame url="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fwilliamwesleyhawn%2Fposts%2Fpfbid0eotscNMjKow6c7pHDiop8idsDtB288kAxG7MoiEiukLmgumsTiSgLsMPM99ac4sgl&show_text=true&width=500" /> */}
           </div>
           <div className="review">
             <h5>

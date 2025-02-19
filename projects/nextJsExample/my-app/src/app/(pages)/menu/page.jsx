@@ -853,241 +853,60 @@ export default function Menu() {
     ],
   };
 
-  // function scrollToTop() {
-  //   window.scrollTo({
-  //     top: 0,
-  //     left: 0,
-  //     behavior: "smooth",
-  //   });
-  // }
-
   return (
-    <>
-      {/* <main className="menu">
-        <div className="header-image">
-          <h1>Menu 1</h1>
-        </div>
-        <nav className="jumpLinks">
-          {menu.sections.map((s, key) => (
-            <a
-              key={key}
-              onClick={() => setActive(s.id)}
-              className={active === s.id ? "active" : ""}
-            >
-              {s.title}
-            </a>
-          ))}
-        </nav>
-        {menu.sections.map((s, key) => (
-          <section
-            key={key}
-            id={s.id}
-            className={active === s.id ? "active" : ""}
-          >
-            <h4>{s.title}</h4>
-            {s.list && (
-              <div className="list">
-                {s.list.map((l, lKey) => l.label).join(" | ")}
-              </div>
-            )}
-            {s.img && <img src={s.img} />}
-            <div className="items">
-              {s.items.map((i, iKey) =>
-                i.subItems ? (
-                  <div key={iKey} className="subItems">
-                    <h6 key={iKey}>{i.label}</h6>
-                    {i.subItems.map((si, siKey) => (
-                      <React.Fragment key={siKey}>
-                        <PriceRow
-                          label={si.label}
-                          description={si.description}
-                          price={si.price}
-                          dots={true}
-                        />
-                      </React.Fragment>
-                    ))}
-                  </div>
-                ) : (
-                  <React.Fragment key={iKey}>
-                    <PriceRow
-                      label={i.label}
-                      description={i.description}
-                      price={i.price}
-                      dots={true}
-                    />
-                  </React.Fragment>
-                )
-              )}
-            </div>
-          </section>
+    <main className="menu">
+      <div className="header-image">
+        <h1>Menu</h1>
+      </div>
+      <nav className="menu-buttons">
+        <button
+          className={activeMenu === "dinner" ? "active" : ""}
+          onClick={(e) => handleClick(e, "dinner")}
+        >
+          Lunch and Dinner
+        </button>
+        <button
+          className={activeMenu === "catering" ? "active" : ""}
+          onClick={(e) => handleClick(e, "catering")}
+        >
+          Catering
+        </button>
+      </nav>
+      {activeMenu === "catering" && (
+        <p className="catering-num">
+          For catering, please call <a href="tel:8288551333">828.855.1333</a>
+        </p>
+      )}
+      <div className={`left-menu${activeMenu === "dinner" ? " active" : ""}`}>
+        {dinnerMenu.sections.slice(0, 4).map((s, key) => (
+          <React.Fragment key={key}>
+            <MenuSection section={s} />
+          </React.Fragment>
         ))}
-        <button className="top" onClick={scrollToTop}>
-          <Icon icon={faChevronUp} />
-        </button>
-      </main> */}
-      <main className="menu2">
-        <div className="header-image">
-          <h1>Menu</h1>
-        </div>
-        <nav className="menu-buttons">
-          <button
-            className={activeMenu === "dinner" ? "active" : ""}
-            onClick={(e) => handleClick(e, "dinner")}
-          >
-            Lunch and Dinner
-          </button>
-          <button
-            className={activeMenu === "catering" ? "active" : ""}
-            onClick={(e) => handleClick(e, "catering")}
-          >
-            Catering
-          </button>
-        </nav>
-        {/* <nav className="jumpLinks">
-          {menu.sections.map((s, key) => (
-            <a key={key} href={`#${s.id}`}>
-              {s.title}
-            </a>
-          ))}
-        </nav> */}
-        {activeMenu === "catering" && (
-          <p className="catering-num">
-            For catering, please call <a href="tel:8288551333">828.855.1333</a>
-          </p>
-        )}
-        <div className={`left-menu${activeMenu === "dinner" ? " active" : ""}`}>
-          {dinnerMenu.sections.slice(0, 4).map((s, key) => (
-            <React.Fragment key={key}>
-              <MenuSection section={s} />
-            </React.Fragment>
-          ))}
-        </div>
-        <div
-          className={`right-menu${activeMenu === "dinner" ? " active" : ""}`}
-        >
-          {dinnerMenu.sections.slice(4).map((s, key) => (
-            <React.Fragment key={key}>
-              <MenuSection section={s} />
-            </React.Fragment>
-          ))}
-        </div>
-        <div
-          className={`left-menu${activeMenu === "catering" ? " active" : ""}`}
-        >
-          {cateringMenu.sections.slice(0, 3).map((s, key) => (
-            <React.Fragment key={key}>
-              <MenuSection section={s} />
-            </React.Fragment>
-          ))}
-        </div>
-        <div
-          className={`right-menu${activeMenu === "catering" ? " active" : ""}`}
-        >
-          {cateringMenu.sections.slice(3).map((s, key) => (
-            <React.Fragment key={key}>
-              <MenuSection section={s} />
-            </React.Fragment>
-          ))}
-        </div>
-        {/* <button className="top" onClick={scrollToTop}>
-          <Icon icon={faChevronUp} />
-        </button> */}
-      </main>
-      {/* <main className="menu3">
-        <h1>Menu 3</h1>
-        <nav className="jumpLinks">
-          {menu.sections.map((s, key) => (
-            <a key={key} href={`#${s.id}`}>
-              {s.title}
-            </a>
-          ))}
-        </nav>
-        <div className="left-menu">
-          {menu.sections.slice(0, 3).map((s, key) => (
-            <section key={key} id={s.id}>
-              <h4>{s.title}</h4>
-              {s.list && (
-                <div className="list">
-                  {s.list.map((l, lKey) => l.label).join(" | ")}
-                </div>
-              )}
-              {s.img && <img src={s.img} />}
-              <div className="items">
-                {s.items.map((i, iKey) =>
-                  i.subItems ? (
-                    <div key={iKey} className="subItems">
-                      <h6 key={iKey}>{i.label}</h6>
-                      {i.subItems.map((si, siKey) => (
-                        <React.Fragment key={siKey}>
-                          <PriceRow
-                            label={si.label}
-                            description={si.description}
-                            price={si.price}
-                            dots={false}
-                          />
-                        </React.Fragment>
-                      ))}
-                    </div>
-                  ) : (
-                    <React.Fragment key={iKey}>
-                      <PriceRow
-                        label={i.label}
-                        description={i.description}
-                        price={i.price}
-                        dots={false}
-                      />
-                    </React.Fragment>
-                  )
-                )}
-              </div>
-            </section>
-          ))}
-        </div>
-        <div className="right-menu">
-          {menu.sections.slice(3).map((s, key) => (
-            <section key={key} id={s.id}>
-              <h4>{s.title}</h4>
-              {s.img && <img src={s.img} />}
-              <div className="items">
-                {s.list && (
-                  <div className="list">
-                    {s.list.map((l, lKey) => l.label).join(" | ")}
-                  </div>
-                )}
-                {s.items.map((i, iKey) =>
-                  i.subItems ? (
-                    <div key={iKey} className="subItems">
-                      <h6 key={iKey}>{i.label}</h6>
-                      {i.subItems.map((si, siKey) => (
-                        <React.Fragment key={siKey}>
-                          <PriceRow
-                            label={si.label}
-                            description={si.description}
-                            price={si.price}
-                            dots={false}
-                          />
-                        </React.Fragment>
-                      ))}
-                    </div>
-                  ) : (
-                    <React.Fragment key={iKey}>
-                      <PriceRow
-                        label={i.label}
-                        description={i.description}
-                        price={i.price}
-                        dots={false}
-                      />
-                    </React.Fragment>
-                  )
-                )}
-              </div>
-            </section>
-          ))}
-        </div>
-        <button className="top" onClick={scrollToTop}>
-          <Icon icon={faChevronUp} />
-        </button>
-      </main> */}
-    </>
+      </div>
+      <div className={`right-menu${activeMenu === "dinner" ? " active" : ""}`}>
+        {dinnerMenu.sections.slice(4).map((s, key) => (
+          <React.Fragment key={key}>
+            <MenuSection section={s} />
+          </React.Fragment>
+        ))}
+      </div>
+      <div className={`left-menu${activeMenu === "catering" ? " active" : ""}`}>
+        {cateringMenu.sections.slice(0, 3).map((s, key) => (
+          <React.Fragment key={key}>
+            <MenuSection section={s} />
+          </React.Fragment>
+        ))}
+      </div>
+      <div
+        className={`right-menu${activeMenu === "catering" ? " active" : ""}`}
+      >
+        {cateringMenu.sections.slice(3).map((s, key) => (
+          <React.Fragment key={key}>
+            <MenuSection section={s} />
+          </React.Fragment>
+        ))}
+      </div>
+    </main>
   );
 }

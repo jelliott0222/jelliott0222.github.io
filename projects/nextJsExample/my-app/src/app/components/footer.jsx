@@ -10,15 +10,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer-row">
-        {/* <img src="mfcLogoTp.png" alt="" /> */}
         <h2>Mountain Fried Chicken</h2>
-        {/* <Image
-          className={""}
-          src="/mfcStore1.jpg"
-          alt=""
-          width={1600}
-          height={1068}
-        /> */}
       </div>
       <div className="footer-row">
         <nav>

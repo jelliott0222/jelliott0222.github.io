@@ -64,13 +64,11 @@ export default function Contact() {
               Call us at <Icon icon={faPhone} /> 828.855.1333
             </a>
           </div>
-          {/* <div className="span-divider">|</div> */}
           <div className="contact-item">
             <a href="mailto:mfckpope@yahoo.com">
               Email us at <Icon icon={faEnvelope} /> mfckpope@yahoo.com
             </a>
           </div>
-          {/* <div className="span-divider">|</div> */}
           <div className="contact-item">
             <a
               href="https://www.facebook.com/MountainFriedChickenHickory"

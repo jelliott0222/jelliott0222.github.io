@@ -1,9 +1,34 @@
+import {
+  faCloudShowersHeavy,
+  faSnowflake,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  function formatDate(date) {
+    return Intl.DateTimeFormat("en-US", {
+      dateStyle: "long",
+      timeZone: "America/New_York",
+    }).format(date);
+  }
+  const today = new Date();
+  const todayFormatted = formatDate(today);
+  const weatherDate = "February 20, 2025";
+  const weatherDateFormatted = formatDate(new Date(weatherDate));
   return (
     <main className="home">
+      {todayFormatted === weatherDateFormatted && (
+        <div className="inclement-weather">
+          <Icon icon={faCloudShowersHeavy} />
+          <div className="inclement-weather-text">
+            Due to inclement weather in our area, we will be closed on{" "}
+            {weatherDate}. Thank you for your understanding!
+          </div>
+          <Icon icon={faSnowflake} />
+        </div>
+      )}
       <section className="hero-container">
         <Image
           className={""}
@@ -39,7 +64,7 @@ export default function Home() {
           </div>
           <Image
             className={""}
-            src="aboutUs1.jpg"
+            src="owners.png"
             alt="Various sides"
             width={1600}
             height={1068}
