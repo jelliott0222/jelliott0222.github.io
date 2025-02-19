@@ -250,36 +250,37 @@ main {
     }
   }
 
-  &.home {
-    .inclement-weather {
-      background-color: darkslategray;
+  .inclement-weather {
+    background-color: darkslategray;
+    position: relative;
+    overflow: hidden;
+
+    &-text {
+      color: $offWhite;
+      font-size: 2rem;
+      padding: 1.5rem 3rem;
+      text-align: center;
+      font-family: $bodyFont;
       position: relative;
-      overflow: hidden;
+      z-index: 5;
+    }
 
-      &-text {
-        color: $offWhite;
-        font-size: 2rem;
-        padding: 1.5rem 3rem;
-        text-align: center;
-        font-family: $bodyFont;
-        position: relative;
-        z-index: 5;
-      }
+    svg {
+      position: absolute;
+      z-index: 1;
+      color: darken(darkslategray, 5%);
+      font-size: 12rem;
+      top: -2rem;
+      left: 2rem;
 
-      svg {
-        position: absolute;
-        z-index: 1;
-        color: darken(darkslategray, 5%);
-        font-size: 12rem;
-        top: -2rem;
-        left: 2rem;
-
-        &.fa-cloud-showers-heavy {
-          right: 2rem;
-          left: auto;
-        }
+      &.fa-cloud-showers-heavy {
+        right: 2rem;
+        left: auto;
       }
     }
+  }
+
+  &.home {
     .hero-container {
       max-height: 50rem;
       padding: 0;
