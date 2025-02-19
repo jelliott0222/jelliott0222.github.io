@@ -1,15 +1,12 @@
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import Image from "next/image";
-import Link from "next/link";
 import {
   faEnvelope,
-  faMap,
-  faMapMarker,
   faMapMarkerAlt,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
+import InclementWeather from "@/app/components/InclementWeather";
 
 export default function Contact() {
   const hours = [
@@ -44,6 +41,7 @@ export default function Contact() {
   ];
   return (
     <main className="contact">
+      <InclementWeather />
       <div className="header-image">
         <h1>Hours and Information</h1>
       </div>
