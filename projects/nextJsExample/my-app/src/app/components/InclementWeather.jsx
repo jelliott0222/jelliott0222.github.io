@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import {
   faCloudShowersHeavy,
   faSnowflake,
@@ -6,6 +8,8 @@ import {
 import { FontAwesomeIcon as Icon } from "@fortawesome/react-fontawesome";
 
 export default function InclementWeather() {
+  const [isShown, setIsShown] = useState(false);
+
   function formatDate(date) {
     return Intl.DateTimeFormat("en-US", {
       dateStyle: "long",
@@ -17,8 +21,12 @@ export default function InclementWeather() {
   const weatherDate = "February 19, 2025";
   const weatherDateFormatted = formatDate(new Date(weatherDate));
 
+  useEffect(() => {
+    setIsShown(todayFormatted === weatherDateFormatted);
+  }, []);
+
   return (
-    todayFormatted === weatherDateFormatted && (
+    isShown && (
       <div className="inclement-weather">
         <Icon icon={faCloudShowersHeavy} />
         <div className="inclement-weather-text">
